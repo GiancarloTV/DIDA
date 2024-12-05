@@ -161,25 +161,28 @@ input[type="number"]::-webkit-outer-spin-button {
 /* -------------------------------------------------- HEADER */
 
 .header {
-    height: 5vh;
+    height: 4vh;
     width: 100%;
-    background-color: var(--content-color);
+
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    background-color: var(--content-color);
+
     transition: background-color var(--transition-duration) var(--transition-ease);
 }
 
 .header_wh {
+    font-size: 2.8vh;
     color: var(--tittle-color);
-    font-size: 3.8vh;
     transition: color var(--transition-duration) var(--transition-ease);
 }
 
 .header_re {
+    font-size: 3vh;
     color: var(--input-error-color);
-    font-size: 4vh;
 }
 
 /* -------------------------------------------------- MAIN */
@@ -251,7 +254,7 @@ main {
     justify-content: center;
 
     overflow: hidden;
-    
+
     transition:
         all var(--transition-duration) var(--transition-ease);
 }
@@ -264,14 +267,18 @@ main {
 /* -------------------------------------------------- MAIN FOOTER*/
 
 footer {
-    height: 5vh;
+    height: 4vh;
     width: 100%;
-    font-size: 4vh;
+
+    font-size: 3vh;
     color: var(--tittle-color);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: var(--content-color);
+
     transition: 
         background-color var(--transition-duration) var(--transition-ease),
         color var(--transition-duration) var(--transition-ease);
