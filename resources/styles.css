@@ -1,59 +1,211 @@
+/* -------------------------------------------------- CONSTANTS */
+:root{
+    --transition-duration: 0.5s;
+    --transition-ease: ease-in-out;
+
+    --background-color  : black;
+    --content-color     : rgb(23, 26, 27);
+    --subcontent-color  : rgb(34 38 39);
+    --transparent-color : #00000070;
+
+    --scroll-bg-color   : #555;
+    --scroll-hover-color: #999999;
+
+    --border-color        : #000000;
+    --border-active-color : #ffffff;
+
+    --hover-color       : rgb(75, 75, 75);
+    --active-color      : rgb(75 75 75 / 50%);
+
+    --input-background-color    : rgb(52 52 52 / 50%);
+    --input-focusbg-color       : rgb(52 52 52 / 100%);
+    --input-text-color          : #d4d4d4d1;
+    --input-error-color         : rgb(186 42 16);
+
+    --button-background-color   : #252525;
+    --button-background-hover   : #92c2e685;
+    --button-border-color       : #494949;
+    --button-border-hover       : #25a0faa6;
+    --button-text-color         : #6f6f6f;
+    --button-text-hover         : #e5e5e5;
+
+    --tittle-color      : rgba(210, 210, 215, 0.8);
+    --subtittle-color   : rgba(210, 210, 215, 0.6);
+    --supertext-color   : rgba(210, 210, 215, 0.4);
+    --text-color        : rgba(210, 210, 215, 0.2);
+
+    --text-color-ok     : #1fa674;
+    --text-color-bad    : #a69521;
+
+    --color-white       : #cbcbcb;
+    --color-blue        : #2782e9;
+    --color-green       : #199a19;
+    --color-yellow      : #a6a603;
+    --color-red         : #a61717;
+}
+
+.light-mode-variables {
+    --background-color  : white;
+    --content-color     : #c2c2c2;
+    --subcontent-color  : rgb(167, 167, 167);
+    --transparent-color : #ffffff70;
+
+    --scroll-bg-color   : #999;
+    --scroll-hover-color: #777;
+
+    --border-color        : black;
+    --border-active-color : black;
+
+    --hover-color      : rgb(167, 167, 167);
+    --active-color      : rgb(167 167 167 / 41%);
+
+    --input-background-color    : rgb(76 76 76 / 20%);
+    --input-focusbg-color       : rgb(76 76 76 / 40%);
+    --input-text-color          : #616161;
+    --input-error-color         : rgb(255 38 0);
+
+    --button-background-color   : #e8e8e8;
+    --button-background-hover   : #316790a1;
+    --button-border-color       : #adadad;
+    --button-text-color         : #6f6f6f;
+    --button-text-hover         : #000000;
+
+    --tittle-color      : black;
+    --subtittle-color   : #525252;
+    --supertext-color   : #484747;
+    --text-color        : rgb(108 108 108);
+
+    --text-color-ok     : #167c56;
+    --text-color-bad    : #80731a;
+
+    --color-white       : #ffffff;
+    --color-blue        : #1ea0f6;
+    --color-green       : #00a600;
+    --color-yellow      : #dcdc00;
+    --color-red         : #c30000;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--scroll-bg-color);
+    transition: background-color var(--transition-duration) var(--transition-ease);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-hover-color);
+}
+
+@keyframes flip {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(-360deg);}
+}
+
+@font-face {
+    font-family: "Material Symbols Outlined";
+    font-style: normal;
+    src: url("resources/symbols.woff2") format("woff2");
+}
+
+.symbols {
+    font-family: "Material Symbols Outlined";
+    font-style: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
+    width: 100vw;
+
+    color: var(--text-color);
+    font-family: 'Arial';
+    user-select: none;
+    background-color: var(--background-color);
+    opacity: 1;
+
+    overflow-x: hidden;
+    transition: 
+        background-color var(--transition-duration) var(--transition-ease),
+        color var(--transition-duration) var(--transition-ease),
+        opacity var(--transition-duration) var(--transition-ease);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
     margin: 0;
+}
+
+/* -------------------------------------------------- HEADER */
+
+.header {
+    height: 5vh;
+    width: 100%;
+    background-color: var(--content-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--transition-duration) var(--transition-ease);
+}
+
+.header_wh {
+    color: var(--tittle-color);
+    font-size: 3.8vh;
+    transition: color var(--transition-duration) var(--transition-ease);
+}
+
+.header_re {
+    color: var(--input-error-color);
+    font-size: 4vh;
+}
+
+/* -------------------------------------------------- MAIN */
+
+main {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     position: relative;
-    overflow: hidden;
 }
-.text-container {
-    position: absolute;
-    top: 25%;
-    text-align: center;
-}
-h2 {
-    color: #6f6f6f;
-    margin: 0;
-}
-.heart {
-    position: absolute;
-    top: 50%;
-    left: 57%;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    transform: rotate(-45deg) translate(-50%, -50%);
-    animation: pulse 1s infinite;
-}
-.heart::before,
-.heart::after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: red;
-}
-.heart::before {
-    top: -50px;
-    left: 0;
-}
-.heart::after {
-    left: 50px;
-    top: 0;
-}
-@keyframes pulse {
-    0% {
-        transform: scale(1) rotate(-45deg) translate(-50%, -50%);
-    }
-    50% {
-        transform: scale(1.2) rotate(-45deg) translate(-50%, -50%);
-    }
-    100% {
-        transform: scale(1) rotate(-45deg) translate(-50%, -50%);
-    }
+
+/* -------------------------------------------------- MAIN FOOTER*/
+
+footer {
+    height: 5vh;
+    width: 100%;
+    font-size: 4vh;
+    color: var(--tittle-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--content-color);
+    transition: 
+        background-color var(--transition-duration) var(--transition-ease),
+        color var(--transition-duration) var(--transition-ease);
 }
