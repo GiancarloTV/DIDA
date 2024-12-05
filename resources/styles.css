@@ -111,7 +111,7 @@
 @font-face {
     font-family: "Material Symbols Outlined";
     font-style: normal;
-    src: url("resources/symbols.woff2") format("woff2");
+    src: url("symbols.woff2") format("woff2");
 }
 
 .symbols {
