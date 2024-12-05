@@ -187,11 +187,15 @@ input[type="number"]::-webkit-outer-spin-button {
 main {
     height: 90vh;
     width: 100%;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
     position: relative;
+
+    background-color: var(--content-color);
 }
 
 /* -------------------------------------------------- MAIN FOOTER*/
