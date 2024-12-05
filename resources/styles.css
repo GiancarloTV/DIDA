@@ -188,7 +188,7 @@ input[type="number"]::-webkit-outer-spin-button {
 /* -------------------------------------------------- MAIN */
 
 main {
-    height: 90vh;
+    height: 92vh;
     width: 100%;
 
     display: flex;
