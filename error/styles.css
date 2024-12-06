@@ -1,0 +1,96 @@
+/* -------------------------------------------------- MAIN */
+
+.main_container {
+    height: 96%;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: var(--content-color);
+}
+
+.main_data {
+    height: 95%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition:
+        all var(--transition-duration) var(--transition-ease);
+}
+
+.main_data_tittle {
+    height: 50%;
+    font-size: 15vw;
+    color: var(--tittle-color);
+    display: flex;
+    align-items: center;
+}
+
+.main_data_message {
+    height: 20%;
+    font-size: 3vh;
+    color: var(--subtittle-color);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main_data_error {
+    height: 10%;
+    font-size: 3vh;
+    color: var(--supertext-color);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main_data_button {
+    height: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main_data_button button {
+    height: 100%;
+    width: 200px;
+    color: var(--subtittle-color);
+    font-size: 2vh;
+    white-space: nowrap;
+    background-color: var(--button-background-color);
+    border-radius: 10px;
+    border: 1px solid var(--button-border-color);
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 1;
+    transition: 
+        background-color var(--transition-duration) var(--transition-ease),
+        border-color var(--transition-duration) var(--transition-ease),
+        width var(--transition-duration) var(--transition-ease),
+        color var(--transition-duration) var(--transition-ease);
+}
+
+.main_data_button button:hover {
+    color: var(--button-text-hover);
+    background-color: var(--button-background-hover);
+    border-color: var(--button-border-hover);
+}
+
+.main_icon {
+    height: 95%;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition:
+        all var(--transition-duration) var(--transition-ease);
+}
+
+.main_icon span {
+    font-size: 25vw;
+    animation: flip 5s linear infinite;
+}
