@@ -149,7 +149,7 @@
 @font-face {
     font-family: "Material Symbols Outlined";
     font-style: normal;
-    src: url("/static/base/symbols.woff2") format("woff2");
+    src: url("/Static/symbols.woff2") format("woff2");
 }
 
 .symbols {

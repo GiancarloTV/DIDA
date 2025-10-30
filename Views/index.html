@@ -3,14 +3,16 @@
 
     <head>
 
-        <title>DIDA GROUP - Home</title>
-        
+        <title>KPI Live</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        
-        <link rel="icon" href="/Static/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="/Static/template.css">
-        <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
+
+        <meta name="theme-color" content="#101010">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        <link rel="stylesheet" type="text/css" href="/static/live/styles.css">
+        <link rel="stylesheet" type="text/css" href="/static/base/template.css">
 
     </head>
 
@@ -19,7 +21,7 @@
         <header class="header">
             <span class="header_logo">
                 <div class="header_logo_">
-                    <img src="/Static/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
+                    <img src="/static/base/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
                 </div>
             </span>
             <p class="header_wh">DIDA</p>
@@ -39,10 +41,10 @@
                     <div class="main_menu_company">
                         <span class="main_menu_company_logo" title="Company logo">
                             <div class="main_menu_company_logo_">
-                                <img src="/Static/DIDA.png" alt="Company Logo" id="company_logo">
+                                <img src="" alt="Company Logo" id="company_logo">
                             </div>
                         </span>
-                        <p title="Company name" id="company_name">DIDAGROUP</p>
+                        <p title="Company name" id="company_name">Company Name</p>
                     </div>
     
                     <div class="main_menu_session" id="open_session_prompt">
@@ -477,11 +479,199 @@
             <p>SERVER</p>
         </footer>
 
-        <script src="/Static/jquery.js"></script>
-        <script src="/Static/chart.js"></script>
-        <script src="/Static/template.js"></script>
-        <script src="/Static/home/script.js"></script>
+        <aside id="menu_pages" class="submenu_pages">
+            <ul class="submenu_pages_list" id="pages_list">
+                <li class="submenu_pages_item" title="Monitoring Page">
+                    <span class="symbols"> &#xe335; </span>
+                    <p>Monitoring</p>
+                </li>
+
+                <li class="submenu_pages_item" title="Consult Page">
+                    <span class="symbols"> &#xe265; </span>
+                    <p>Consult</p>
+                </li>
+
+                <li class="submenu_pages_item" title="Senders Page">
+                    <span class="symbols"> &#xe8c7; </span>
+                    <p>Senders</p>
+                </li>
+
+                <li class="submenu_pages_item" title="QR Generator Page">
+                    <span class="symbols"> &#xef6b;</span>
+                    <p>QR Codes</p>
+                </li>
+
+                <li class="submenu_pages_item" title="Admin Page">
+                    <span class="symbols"> &#xe7fd; </span>
+                    <p>Admin</p>
+                </li>
+            </ul>
+        </aside>
+
+        <aside id="main_menu_dark" class="main_menu_dark">
+            <div class="main_menu_dark_box">
+            </div>
+        </aside>
+
+        <aside id="session_prompt" class="prompt_session">
+            <div class="session_content">
+
+                <div class="session_header">
+                    <span id="close_session_prompt" class="symbols">&#xe5cd;</span>
+                </div>
+
+                <div class="session_main">
+
+                    <div class="session_main_message">
+                        <p id="prompt_message">Sign in</p>
+                    </div>
+
+                    <div class="session_main_icon">
+                        <span class="symbols"> &#xe7fd; </span>
+                    </div>
+
+                    <form action="" class="session_main_form" id="form_login">
+
+                        <div class="session_main_form_inputs" id="form_inputs">
+
+                            <div class="session_main_form_input">
+                                <label class="input_label" for="user_email" title="Enter email">Email:</label>
+                                <input class="input" id="user_email" type="email" name="email" placeholder="email@domain.com" autocomplete="off">
+                                <p class="input_error" id="user_email_error">Email sintax error</p>
+                            </div>
+        
+                            <div class="session_main_form_input">
+                                <label class="input_label" for="user_pass" title="Enter password">Password:</label>
+                                <input class="input" id="user_pass" type="password" name="password" placeholder="password" autocomplete="off">
+                                <p class="input_error" id="user_pass_error">Pass may content 8-16 chars</p>
+                            </div>
+
+                        </div>
+
+                        <div class="session_main_form_button">
+                            <button class="button" id="login_button" type="submit" disabled title="User session">Log in</button>
+                        </div>
+
+                    </form>
+                    
+                </div>
+                
+                <div class="session_footer">
+                    <span class="symbols session_footer_spinner" id="prompt_loader"> &#xe627;</span>
+                    <p class="session_footer_message" id="prompt_response">Session Required</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <aside id="prompt_sync" class="prompt_sync">
+            <div class="prompt_sync_content">
+                <span class="symbols">&#xe86a;</span>
+                <p id="prompt_sync_text">Waiting session</p>
+            </div>
+        </aside>
+
+        <aside id="notification0" class="notifications notification-inactive">
+            <div class="notification_content">
+                <div class="notification_icon">
+                    <span id="notification0_icon" class="symbols"> &#xe002; </span>
+                </div>
+
+                <div class="notification_main">
+                    <p id="notification0_title" class="notification_title">Title</p>
+                    <p id="notification0_text" class="notification_text">Message</p>
+                </div>
+
+                <div class="notification_close">
+                    <span id="notification0_close" class="symbols"> &#xe5cd; </span>
+                </div>
+            </div>
+        </aside>
+
+        <aside id="notification1" class="notifications notification-inactive">
+            <div class="notification_content">
+                <div class="notification_icon">
+                    <span id="notification1_icon" class="symbols"> &#xe002; </span>
+                </div>
+
+                <div class="notification_main">
+                    <p id="notification1_title" class="notification_title">Title</p>
+                    <p id="notification1_text" class="notification_text">Message</p>
+                </div>
+
+                <div class="notification_close">
+                    <span id="notification1_close" class="symbols"> &#xe5cd; </span>
+                </div>
+            </div>
+        </aside>
+
+        <aside id="notification2" class="notifications notification-inactive">
+            <div class="notification_content">
+                <div class="notification_icon">
+                    <span id="notification2_icon" class="symbols"> &#xe002; </span>
+                </div>
+
+                <div class="notification_main">
+                    <p id="notification2_title" class="notification_title">Title</p>
+                    <p id="notification2_text" class="notification_text">Message</p>
+                </div>
+
+                <div class="notification_close">
+                    <span id="notification2_close" class="symbols"> &#xe5cd; </span>
+                </div>
+            </div>
+        </aside>
+
+
+
+        <aside id="main_data_window_production_clone" class="main_data_window_data_clone">
+            <div class="main_data_window_production_clone">
+                <div id="production_time_clone" class="main_data_window_production_column">
+                    <p>Time</p>
+                    <p>--:--:--</p>
+                </div>
+
+                <div id="production_worker_clone" class="main_data_window_production_column">
+                    <p>Worker</p>
+                    <p>-</p>
+                </div>
+
+                <div id="production_produced_clone" class="main_data_window_production_column">
+                    <p>Produced</p>
+                    <p>0</p>
+                </div>
+
+                <div id="production_accepted_clone" class="main_data_window_production_column">
+                    <p>Accepted</p>
+                    <p>0</p>
+                </div>
+
+                <div id="production_reworked_clone" class="main_data_window_production_column">
+                    <p>Reworked</p>
+                    <p>0</p>
+                </div>
+
+                <div id="production_defective_clone" class="main_data_window_production_column">
+                    <p>Defective</p>
+                    <p>0</p>
+                </div>
+
+                <div id="production_contaminated_clone" class="main_data_window_production_column">
+                    <p>Contaminated</p>
+                    <p>0</p>
+                </div>
+
+                <div id="production_adjust_clone" class="main_data_window_production_column">
+                    <p>Adjust</p>
+                    <p>0</p>
+                </div>
+            </div>
+        </aside>
+
+        <script src="/static/base/jquery.js"></script>
+        <script src="/static/base/chart.js"></script>
+        <script src="/static/base/template.js"></script>
+        <script src="/static/live/script.js"></script>
 		
 	</body>
-
 </html>
