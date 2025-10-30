@@ -1,4 +1,4 @@
-/* -------------------------------------------------- MAIN */
+/* --------------------------------------------- MAIN */
 
 .main_container {
     height: 98%;
@@ -7,6 +7,9 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: var(--content-color);
+
+    transition: 
+        background-color (--transition-duration) var(--transition-type);
 }
 
 .main_data {
@@ -16,21 +19,21 @@
     flex-direction: column;
     justify-content: space-evenly;
     transition:
-        all var(--transition-duration) var(--transition-ease);
+        all var(--transition-duration) var(--transition-type);
 }
 
-.main_data_tittle {
+.main_data_title {
     height: 50%;
     font-size: 15vw;
-    color: var(--tittle-color);
+    color: var(--title-color);
     display: flex;
     align-items: center;
 }
 
 .main_data_message {
     height: 20%;
-    font-size: 3vh;
-    color: var(--subtittle-color);
+    font-size: 3dvh;
+    color: var(--subtitle-color);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -38,7 +41,7 @@
 
 .main_data_error {
     height: 10%;
-    font-size: 3vh;
+    font-size: 3dvh;
     color: var(--supertext-color);
     display: flex;
     align-items: center;
@@ -46,36 +49,11 @@
 }
 
 .main_data_button {
-    height: 5%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-}
-
-.main_data_button button {
-    height: 100%;
-    width: 200px;
-    color: var(--subtittle-color);
-    font-size: 2vh;
-    white-space: nowrap;
-    background-color: var(--button-background-color);
-    border-radius: 10px;
-    border: 1px solid var(--button-border-color);
-    cursor: pointer;
-    overflow: hidden;
-    opacity: 1;
-    transition: 
-        background-color var(--transition-duration) var(--transition-ease),
-        border-color var(--transition-duration) var(--transition-ease),
-        width var(--transition-duration) var(--transition-ease),
-        color var(--transition-duration) var(--transition-ease);
-}
-
-.main_data_button button:hover {
-    color: var(--button-text-hover);
-    background-color: var(--button-background-hover);
-    border-color: var(--button-border-hover);
 }
 
 .main_icon {
@@ -87,10 +65,47 @@
     justify-content: center;
     overflow: hidden;
     transition:
-        all var(--transition-duration) var(--transition-ease);
+        all var(--transition-duration) var(--transition-type);
 }
 
 .main_icon span {
     font-size: 25vw;
     animation: flip 5s linear infinite;
+}
+
+/* -------------------------------------------------- MEDIA */
+
+@media (max-width: 800px) {
+    .main_container {
+        flex-direction: column;
+    }
+
+    .main_data {
+        height: 70%;
+        width: 100%;
+        padding-inline: 5vw;
+    }
+
+    .main_data_title {
+        font-size: 15dvh;
+    }
+
+    .main_data_message {
+        height: 25%;
+    }
+
+    .main_data_button {
+        height: 10%;
+        justify-content: space-evenly;
+    }
+
+    .main_icon {
+        height: 15%;
+        width: 100%;
+    }
+
+    .main_icon span {
+        font-size: 15dvh;
+    }
+    
 }
