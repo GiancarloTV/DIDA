@@ -1,0 +1,60 @@
+/*? ========== CONTAINER ========== */
+.redirect-container {
+    height: 100dvh;
+    
+    text-align: center;
+    color: var(--supertext-color);
+    font-size: var(--supertext-size);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #282828;
+}
+
+/** ========== SPINNER ========== */
+
+.spinner {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 6px solid #606060;
+    border-top: 6px solid var(--color-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+/** ========== LOGO ========== */
+
+.header_logo {
+    animation: counter-spin 1s linear infinite;
+}
+
+.header_logo_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dida_logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes counter-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}

@@ -23,4 +23,5 @@ TestResults.xml
 # Python app
 __pycache__/
 *.py
-/Sys/
+/Sys/Exceptions.txt
+/Views/

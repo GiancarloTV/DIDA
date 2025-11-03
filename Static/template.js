@@ -230,7 +230,7 @@
   async function handle_server_config () {
     try {
 
-      let response = await fetch (`/server/config`, {
+      let response = await fetch (`/Sys/Config.json`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
