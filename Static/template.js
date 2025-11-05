@@ -29,6 +29,8 @@
   let height = window.innerHeight;
 
   function handle_resize () {
+    const menu_mobile = $('#header_nav_mobile');
+
     window.addEventListener("resize", function() {
       let new_width = window.innerWidth;
       const notifications = [$('#notification0'), $('#notification1'), $('#notification2')];
@@ -37,11 +39,8 @@
       on_resize(new_width, width);
       width = new_width;
 
-      if (width > 800 && $('.main_menu').hasClass('main_menu-hover')) {
-        $('.main_menu').removeClass('main_menu-hover')
-        $('.main_menu span').removeAttr('style');
-        $('.main_menu p').removeAttr('style');
-        $('#main_menu_dark').fadeOut(100);
+      if (width > 800 && menu_mobile.is(':visible')) {
+        menu_mobile.fadeOut(200);
       }
 
       notifications.forEach((notif, index) => {
@@ -53,62 +52,33 @@
         notification_id = 0;
       });
     });
-
-    window.addEventListener('load', function () {
-      const footer_height = document.querySelector('footer')?.offsetHeight || 0;
-
-      setTimeout(() => {
-        window.scrollTo(0, footer_height * 0.5);
-      }, 100);
-    });
   }
 
 // Handle Menu Functions
   function handle_menu_hover () {
 
-    const main_menu = $('.main_menu');
-    const menu_button = $('.main_menu_title');
-    const menu_dark = $('#main_menu_dark');
-    const menu_pages = $('#menu_pages');
+    const menu_button = $('#menu_button');
+    const menu_mobile = $('#header_nav_mobile');
+    const menu_items = $('.header_nav_mobile_item');
 
     menu_button.on('click', function () {
 
-      if (width <= 800 && !main_menu.hasClass('main_menu-hover')) {
-
-        main_menu.addClass('main_menu-hover')
-        $('.main_menu span').css('width', '25%');
-        $('.main_menu p').css('width', '70%');
-        menu_dark.fadeIn(100);
-        menu_pages.css('left', '50.8vw');
-
-      } else if (main_menu.hasClass('main_menu-hover')) {
-
-        main_menu.removeClass('main_menu-hover');
-        $('.main_menu span').removeAttr('style');
-        $('.main_menu p').removeAttr('style');
-        menu_dark.fadeOut(100);
-        menu_pages.removeAttr('style');
-
-      }
+      menu_mobile.fadeIn(200);
 
     });
 
-    $(document).on('click touchstart', function (event) {
-      if (!$(event.target).closest('.main_menu').length) {
-        if (width <= 800 && main_menu.hasClass('main_menu-hover')) {
+    menu_items.on('click', function () {
 
-          main_menu.removeClass('main_menu-hover');
-          $('.main_menu span').removeAttr('style');
-          $('.main_menu p').removeAttr('style');
-          menu_dark.fadeOut(100);
-          menu_pages.removeAttr('style');
+      const item = $(this).text();
 
-        }
+      switch (item) {
+
+        case 'Cerrar':
+          menu_mobile.fadeOut(200);
+          break;
+
       }
 
-      if (!$(event.target).closest('.search_result_list').length && !$(event.target).closest('.search_order_input').length) {
-        $('#search_result').empty();
-      }
     });
 
   }
@@ -729,32 +699,6 @@
     if (all_closed) {
       notification_id = 0;
     }
-  }
-
-// Handle Sync Display
-  const SYNC_STATE = {
-    NO_SESSION  : 'Waiting session',
-    NO_DEVICES  : 'Waiting devices',
-    UPDATING    : 'Synchronizing devices',
-    NO_SERVER   : 'Server connection closed'
-  }
-
-  function set_display (action = 'lock', message = 'Display locked', clean = false) {
-
-    const sync_prompt = $('#prompt_sync');
-    const sync_text   = $('#prompt_sync_text');
-    const is_hidden   = sync_prompt.is(':hidden');
-
-    sync_text.text(message);
-
-    if (action === 'lock' && is_hidden) {
-      sync_prompt.fadeIn(100);
-    } else if (action === 'unlock') {
-      sync_prompt.fadeOut(100);
-    }
-
-    on_set_display(action, clean);
-
   }
 
 // Time

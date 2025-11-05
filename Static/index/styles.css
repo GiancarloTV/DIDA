@@ -1,6 +1,7 @@
-/*? ========== CONTAINER ========== */
+/*? ========== CONTAINER LAYER 1 ========== */
 .redirect-container {
     height: 100dvh;
+    width: 100dvw;
     
     text-align: center;
     color: var(--supertext-color);
@@ -17,24 +18,50 @@
 /** ========== SPINNER ========== */
 
 .spinner {
-    width: 100px;
-    height: 100px;
+    width: 15dvh;
+    height: 15dvh;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    border: 6px solid #606060;
-    border-top: 6px solid var(--color-red);
+    border: 1dvh solid #606060;
+    border-top: 1dvh solid var(--color-red);
     border-radius: 50%;
+    margin: 2dvh auto;
+    
     animation: spin 1s linear infinite;
-    margin: 20px auto;
 }
 
-/** ========== LOGO ========== */
+/*? ========== CONTAINER LOGO ========== */
+
+.logo_container {
+    height: 100dvh;
+    width: 100dvw;
+
+    position:absolute;
+    left: 0;
+    top:-1dvh;
+
+    display: block;
+    
+    z-index: 10;
+    overflow: hidden;
+}
+
+.logo {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
 
 .header_logo {
-    animation: counter-spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header_logo_ {
@@ -44,8 +71,9 @@
 }
 
 #dida_logo {
-    width: 60px;
-    height: 60px;
+    height: 7dvh;
+    width: 7dvh;
+
     object-fit: contain;
 }
 
