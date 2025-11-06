@@ -22,6 +22,3 @@ rad.json
 TestResults.xml
 # Python app
 __pycache__/
-*.py
-/Sys/Exceptions.txt
-/Views/

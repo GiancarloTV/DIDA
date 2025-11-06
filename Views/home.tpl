@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>DIDA GROUP - Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <meta name="theme-color" content="#101010">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+        <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
+    </head>
+
+    <body>
+        
+        <header class="section_header">
+            <div class="section_header_logo">
+                <span class="section_header_logo_img">
+                    <img src="https://didag.net/Static/img/DIDAGROUP.png" alt="DIDAGROUP Logo" id="dida_logo">
+                </span>
+            </div>
+
+            <nav class="section_header_nav">
+                <ul class="section_header_nav_list">
+                    <li class="section_header_nav_item-active">Inicio</li>
+                    <li>Servicios</li>
+                    <li>Contacto</li>
+                    <li>FAQ</li>
+                </ul>
+            </nav>
+            
+            <span class="section_header_nav_button symbols" id="menu_button" title="Open Menu"> &#xe5d2; </span>
+        </header>
+
+        <main class="section_main">
+
+            <section class="section_main_hero">
+                <div class="section_main_content">
+                    <div class="section_main_content_wrap">
+                        <div class="section_main_content_info">
+                            <h1>KPI System</h1>
+                            <p>El sistema que necesitas. Toma decisiones informadas e inmediatas. Obtén información valiosa al instante sin complicaciones. Mejora tu productividad y eficiencia con nosotros.</p>
+    
+                            <div class="wrap-cta">
+                                <button class="cta-a">Solicita hoy una prueba gratuita</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section_main_content_wrap" id="section_main_img">
+                        <span class="section_main_content_img">
+                            <img src="https://didag.net/Static/img/bg.png" alt="Hero Image">
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_description">
+                <div class="section_main_description_title">
+                    <h3>¿Por qué elegir nuestro sistema KPI?</h3>
+                </div>
+
+                <div class="section_main_content_description">
+                    <div class="section_main_content_description_cards">
+
+                        <div class="section_main_content_description_card_wrap">
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+20%</span>
+                                <span class="section_main_content_description_card_t">Incrementa la productividad</span>
+                            </div>
+    
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+15%</span>
+                                <span class="section_main_content_description_card_t">Incrementa tus ganancias</span>
+                            </div>
+                        </div>
+                        
+                        <div class="section_main_content_description_card_wrap">
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">-10%</span>
+                                <span class="section_main_content_description_card_t">Reduce tiempos</span>
+                            </div>
+    
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+5%</span>
+                                <span class="section_main_content_description_card_t">Mejora tus indicadores</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="section_main_content_description_info">
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xe26b;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Dashboards en Tiempo Real</h4>
+                                <p class="section_main_content_subinfo_d">Visualiza tus KPIs al instante con gráficos interactivos y alertas automáticas.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xef42;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Generación de Reportes Automáticos</h4>
+                                <p class="section_main_content_subinfo_d">Recibe informes detallados de tus KPIs en intervalos personalizados.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xe425;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Implementación Rápida</h4>
+                                <p class="section_main_content_subinfo_d">Configura y comienza a utilizar el sistema en pocos días, sin complicaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xef92;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Escalabilidad </h4>
+                                <p class="section_main_content_subinfo_d">Adapta el sistema a las necesidades de tus procesos a medida que crecen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_clients">
+                <div class="section_main_clients_title">
+                    <h3>Empresas que confían en nosotros</h3>
+                </div>
+
+                <div class="section_main_content_clients">
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/3DSoluciones.png" alt="3Dsoluciones">
+                        <span>3DSoluciones</span>
+                    </div>
+
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/Mitsubishi.png" alt="Mitsubishi">
+                        <span>Mitsubishi Electric SJR</span>
+                    </div>
+
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/Tyrza.png" alt="Tyrza">
+                        <span>Tyrza Troquelados</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_services">
+                <div class="section_main_services_title">
+                    <h3>Nuestros servicios</h3>
+                </div>
+
+                <div class="section_main_content_clients">
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf190;</span>
+                        <span>Monitoreo de Indicadores de Productividad</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf724;</span>
+                        <span>Monitoreo de Indicadores de Mantenimiento</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xe55e;</span>
+                        <span>Sistemas de Trazabilidad</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf59a;</span>
+                        <span>Capacitaciones y asesorías</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_form">
+                <div class="section_main_form_title">
+                    <h3>Ponte en contacto con nosotros</h3>
+                </div>
+
+                <div class="section_main_content_form">
+                    <div class="section_main_content_form_img" id="section_form_img">
+                        <img src="https://didag.net/Static/img/contact.png" alt="Contact Image">
+                    </div>
+
+                    <form class="section_main_content_form_wrap">
+
+                        <div class="section_main_content_form_input">
+                            <label for="name">Nombre completo:</label>
+                            <input type="text" id="name_input" placeholder="Nombre" autocomplete="off" required>
+                            <span id="name_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="company">Nombre de la empresa:</label>
+                            <input type="text" id="company_input" placeholder="Empresa" autocomplete="off" required>
+                            <span id="company_error">Error</span>
+                        </div>
+                        
+                        <div class="section_main_content_form_input">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email_input" placeholder="Correo electrónico" autocomplete="off" required>
+                            <span id="email_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="phone">Número de teléfono:</label>
+                            <input type="tel" id="phone_input" placeholder="Número de contacto +52" autocomplete="off" required>
+                            <span id="phone_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="message">Escribenos tu mensaje:</label>
+                            <input type="text" id="message_input" placeholder="Tu mensaje" autocomplete="off" required>
+                            <span id="message_error">Error</span>
+                        </div>
+
+                        <button type="submit" class="cta-a" id="send_button">Enviar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section_main_faq">
+
+                <div class="section_main_faq_title">
+                    <h3>Preguntas frecuentes</h3>
+                </div>
+
+                <div class="section_main_content_faq">
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Qué es un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">Un sistema KPI (Key Performance Indicator) es una herramienta que ayuda a las empresas a medir y monitorear su desempeño en función de objetivos específicos.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Cómo puede ayudarme un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">Un sistema KPI te permite tomar decisiones informadas basadas en datos reales, identificar áreas de mejora y optimizar tus procesos para alcanzar tus metas empresariales.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Es difícil implementar un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">No, nuestro sistema está diseñado para ser fácil de implementar y usar. Ofrecemos soporte y capacitación para asegurarnos de que puedas aprovechar al máximo sus beneficios.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Puedo personalizar los KPIs según mis necesidades?</h4>
+                        <p class="section_main_content_faq_item_a">Sí, nuestro sistema permite personalizar los KPIs para que se alineen con los objetivos específicos de tu empresa y sector.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Ofrecen soporte técnico?</h4>
+                        <p class="section_main_content_faq_item_a">Sí, contamos con un equipo de soporte técnico disponible para ayudarte con cualquier duda o problema que puedas tener con el sistema.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿De dónde son?</h4>
+                        <p class="section_main_content_faq_item_a">Contamos con un equipo de profesionales en la zona centro de México, lo que nos permite ofrecer un servicio integral y adaptado a las necesidades de cada cliente en el bajío.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section_main_footer">
+                <div class="footer_content">
+
+                    <div class="footer_section footer_company">
+                        <div class="footer_logo">
+                            <img src="https://didag.net/Static/img/DIDAGROUP.png" alt="DIDA GROUP Logo">
+                        </div>
+                        <p class="footer_description">
+                            Soluciones en tecnología que transforman datos en decisiones inteligentes.
+                        </p>
+                    </div>
+
+                    <div class="footer_section footer_contact">
+                        <h4 class="footer_title">Contacto</h4>
+
+                        <div class="footer_contact_info">
+                            <div class="contact_item">
+                                <span class="symbols">&#xe0c8;</span>
+                                <span>San Juan del Río, Qro, México</span>
+                            </div>
+
+                            <div class="contact_item">
+                                <span class="symbols">&#xe0be;</span>
+                                <a href="mailto:ventas@didag.net">ventas@didag.net</a>
+                            </div>
+
+                            <div class="contact_item">
+                                <span class="symbols">&#xe9cd;</span>
+                                <a href="https://wa.me/524272312080" target="_blank">+52 427 231 2080</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="footer_bottom">
+                    <p class="footer_copyright">
+                        © 2025 DIDA GROUP. Todos los derechos reservados.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <aside id="aside_header_nav" class="aside_header_nav">
+            <div class="aside_header_nav_content">
+                <div class="aside_header_nav_logo">
+                    <span class="aside_header_logo_img">
+                        <img src="https://didag.net/Static/img/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
+                    </span>
+
+                    <span class="symbols aside_header_logo_span" id="aside_header_nav_close">&#xe5cd;</span>
+                </div>
+
+                <ul class="aside_header_nav_list">
+                    <li class="aside_header_nav_item-active">Inicio</li>
+                    <li>Servicios</li>
+                    <li>Contacto</li>
+                    <li>FAQ</li>
+                </ul>
+
+                <div class="aside_header_nav_contact">
+                    <a href="mailto:ventas@didag.net" class="symbols">&#xe0be;</a>
+                    <a href="https://wa.me/524272312080" target="_blank" class="symbols">&#xe9cd;</a>
+                </div>
+
+                <div class="aside_header_nav_bottom">
+                    <p>© 2025 DIDA GROUP.</p>
+                    <p>Todos los derechos reservados.</p>
+                </div>
+
+            </div>
+        </aside>
+
+        <script src="https://didag.net/Static/jquery.js"></script>
+        <script src="/Static/home/script.js"></script>
+
+    </body>
+</html>
