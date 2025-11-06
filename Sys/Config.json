@@ -1,4 +1,4 @@
 {
   "HTTP_PORT": 80,
-  "MAINTENANCE": true
+  "MAINTENANCE": false
 }

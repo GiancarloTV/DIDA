@@ -2,6 +2,8 @@
 
 let current_y = $(this).scrollTop();
 let current_w = $(this).width();
+let server_config = null;
+const BLACK = "color:#537684";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\+52\d{10}$/;
@@ -9,6 +11,21 @@ const phoneRegex = /^\+52\d{10}$/;
 const targets = [$('.section_main_hero'), $('.section_main_form')];
 
 $(document).ready(function() {
+
+    (async function() {
+
+        await handle_server_config();
+
+        if (server_config) {
+            if (server_config['MAINTENANCE'] === true) {
+                window.location.href = '/';
+            }
+        } else {
+            window.location.href = '/';
+        }
+
+
+    })();
 
     // === SMOOTH SCROLLING FOR NAVIGATION ===
     
@@ -309,4 +326,31 @@ $(document).ready(function() {
 
         // ahora digits debe tener exactamente 10 dígitos
         return /^\d{10}$/.test(digits);
+    }
+
+    async function handle_server_config () {
+        try {
+
+        let response = await fetch (`/Sys/Config.json`, {
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache'
+            },
+            cache: 'no-store'
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+
+        let data = await response.json();
+
+        console.log("%c[SRVR] Config Downloaded: %o", BLACK, data);
+        server_config = data;
+
+        } catch (error) {
+        console.error(error);
+        server_config = null;
+        }
     }
