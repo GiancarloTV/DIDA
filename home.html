@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
     <head>
-
-        <title>KPI Live</title>
+        <title>DIDA GROUP - Home</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -11,668 +9,338 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
-        <link rel="icon" href="/Static/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
-        <link rel="stylesheet" type="text/css" href="/Static/template.css">
-
+        <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/Static/landing/styles.css">
     </head>
 
     <body>
+        
+        <header class="section_header">
+            <div class="section_header_logo">
+                <span class="section_header_logo_img">
+                    <img src="https://didag.net/Static/img/DIDAGROUP.png" alt="DIDAGROUP Logo" id="dida_logo">
+                </span>
+            </div>
 
-        <header class="header">
-            <span class="header_logo">
-                <div class="header_logo_">
-                    <img src="/Static/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
-                </div>
-            </span>
-            <p class="header_wh">DIDA</p>
-            <p class="header_re">GROUP</p>
+            <nav class="section_header_nav">
+                <ul class="section_header_nav_list">
+                    <li class="section_header_nav_item-active">Inicio</li>
+                    <li>Servicios</li>
+                    <li>Contacto</li>
+                    <li>FAQ</li>
+                </ul>
+            </nav>
+            
+            <span class="section_header_nav_button symbols" id="menu_button" title="Open Menu"> &#xe5d2; </span>
         </header>
 
-        <main id="main_content">
+        <main class="section_main">
 
-            <div class="main_menu_ghost">
-
-                <nav class="main_menu">
-                    <div class="main_menu_title" title="Main menu">
-                        <span class="symbols"> &#xe5d2; </span>
-                        <p>Menu</p>
-                    </div>
+            <section class="section_main_hero">
+                <div class="section_main_content">
+                    <div class="section_main_content_wrap">
+                        <div class="section_main_content_info">
+                            <h1>KPI System</h1>
+                            <p>El sistema que necesitas. Toma decisiones informadas e inmediatas. Obtén información valiosa al instante sin complicaciones. Mejora tu productividad y eficiencia con nosotros.</p>
     
-                    <div class="main_menu_company">
-                        <span class="main_menu_company_logo" title="Company logo">
-                            <div class="main_menu_company_logo_">
-                                <img src="" alt="Company Logo" id="company_logo">
+                            <div class="wrap-cta">
+                                <button class="cta-a">Solicita hoy una prueba gratuita</button>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="section_main_content_wrap" id="section_main_img">
+                        <span class="section_main_content_img">
+                            <img src="https://didag.net/Static/img/bg.png" alt="Hero Image">
                         </span>
-                        <p title="Company name" id="company_name">Company Name</p>
                     </div>
-    
-                    <div class="main_menu_session" id="open_session_prompt">
-                        <span class="symbols" title="Log in"> &#xea77; </span>
-                        <p title="Log in">Log in</p>
-                    </div>
-    
-                    <ul class="main_menu_devices" id="main_menu">
-                    </ul>
+                </div>
+            </section>
 
-                    <ul class="main_menu_functions">
-                        <li class="main_menu_function_gral" title="Select page to go" id="pages_button">
-                            <span class="symbols"> &#xe069; </span>
-                            <p>Go to</p>
-                        </li>
+            <section class="section_main_description">
+                <div class="section_main_description_title">
+                    <h3>¿Por qué elegir nuestro sistema KPI?</h3>
+                </div>
 
-                        <li class="main_menu_function_theme" title="Toggle To Light Mode" id="theme-toggler">
-                            <div class="main_menu_function_theme_light">
-                                <span class="symbols"> &#xe430; </span>
-                                <p>Light</p>
+                <div class="section_main_content_description">
+                    <div class="section_main_content_description_cards">
+
+                        <div class="section_main_content_description_card_wrap">
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+20%</span>
+                                <span class="section_main_content_description_card_t">Incrementa la productividad</span>
                             </div>
     
-                            <div class="main_menu_function_theme_dark">
-                                <span class="symbols"> &#xef44; </span>
-                                <p>Dark</p>
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+15%</span>
+                                <span class="section_main_content_description_card_t">Incrementa tus ganancias</span>
                             </div>
-                        </li>
+                        </div>
+                        
+                        <div class="section_main_content_description_card_wrap">
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">-10%</span>
+                                <span class="section_main_content_description_card_t">Reduce tiempos</span>
+                            </div>
+    
+                            <div class="section_main_content_description_card">
+                                <span class="section_main_content_description_card_n">+5%</span>
+                                <span class="section_main_content_description_card_t">Mejora tus indicadores</span>
+                            </div>
+                        </div>
 
-                        <li class="main_menu_function_time" title="Current time">
-                            <span class="symbols"> &#xe307;</span>
-                            <p id="current_time">12:00 a. m.</p>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
-
-            <div class="main_content">
-                <div class="main_content_cards">
-                    <div class="main_content_card" title="Units produced">
-                        <span id="card_produced">0</span>
-                        <p>Produced</p>
                     </div>
 
-                    <div class="main_content_card" title="Units accepted">
-                        <span id="card_accepted">0</span>
-                        <p>Accepted</p>
+                    <div class="section_main_content_description_info">
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xe26b;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Dashboards en Tiempo Real</h4>
+                                <p class="section_main_content_subinfo_d">Visualiza tus KPIs al instante con gráficos interactivos y alertas automáticas.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xef42;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Generación de Reportes Automáticos</h4>
+                                <p class="section_main_content_subinfo_d">Recibe informes detallados de tus KPIs en intervalos personalizados.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xe425;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Implementación Rápida</h4>
+                                <p class="section_main_content_subinfo_d">Configura y comienza a utilizar el sistema en pocos días, sin complicaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="section_main_content_subinfo">
+                            <span class="symbols">&#xef92;</span>
+                            <div class="section_main_content_subinfo_wrap">
+                                <h4 class="section_main_content_subinfo_t">Escalabilidad </h4>
+                                <p class="section_main_content_subinfo_d">Adapta el sistema a las necesidades de tus procesos a medida que crecen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_clients">
+                <div class="section_main_clients_title">
+                    <h3>Empresas que confían en nosotros</h3>
+                </div>
+
+                <div class="section_main_content_clients">
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/3DSoluciones.png" alt="3Dsoluciones">
+                        <span>3DSoluciones</span>
                     </div>
 
-                    <div class="main_content_card" title="Units reworked">
-                        <span id="card_reworked">0</span>
-                        <p>Reworked</p>
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/Mitsubishi.png" alt="Mitsubishi">
+                        <span>Mitsubishi Electric SJR</span>
                     </div>
 
-                    <div class="main_content_card" title="Units for scrap">
-                        <span id="card_scrap">0</span>
-                        <p>Scrap</p>
+                    <div class="section_main_content_clients_logos">
+                        <img src="https://didag.net/Static/img/Tyrza.png" alt="Tyrza">
+                        <span>Tyrza Troquelados</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_services">
+                <div class="section_main_services_title">
+                    <h3>Nuestros servicios</h3>
+                </div>
+
+                <div class="section_main_content_clients">
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf190;</span>
+                        <span>Monitoreo de Indicadores de Productividad</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf724;</span>
+                        <span>Monitoreo de Indicadores de Mantenimiento</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xe55e;</span>
+                        <span>Sistemas de Trazabilidad</span>
+                    </div>
+
+                    <div class="section_main_content_services_logos">
+                        <span class="symbols">&#xf59a;</span>
+                        <span>Capacitaciones y asesorías</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_main_form">
+                <div class="section_main_form_title">
+                    <h3>Ponte en contacto con nosotros</h3>
+                </div>
+
+                <div class="section_main_content_form">
+                    <div class="section_main_content_form_img" id="section_form_img">
+                        <img src="/Static/img/contact.png" alt="Contact Image">
+                    </div>
+
+                    <form class="section_main_content_form_wrap">
+
+                        <div class="section_main_content_form_input">
+                            <label for="name">Nombre completo:</label>
+                            <input type="text" id="name_input" placeholder="Nombre" required>
+                            <span id="name_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="company">Nombre de la empresa:</label>
+                            <input type="text" id="company_input" placeholder="Empresa" required>
+                            <span id="company_error">Error</span>
+                        </div>
+                        
+                        <div class="section_main_content_form_input">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email_input" placeholder="Correo electrónico" required>
+                            <span id="email_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="phone">Número de teléfono:</label>
+                            <input type="tel" id="phone_input" placeholder="Número de contacto +52" required>
+                            <span id="phone_error">Error</span>
+                        </div>
+
+                        <div class="section_main_content_form_input">
+                            <label for="message">Escribenos tu mensaje:</label>
+                            <input type="text" id="message_input" placeholder="Tu mensaje" required>
+                            <span id="message_error">Error</span>
+                        </div>
+
+                        <button type="submit" class="cta-a" id="send_button">Enviar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="section_main_faq">
+
+                <div class="section_main_faq_title">
+                    <h3>Preguntas frecuentes</h3>
+                </div>
+
+                <div class="section_main_content_faq">
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Qué es un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">Un sistema KPI (Key Performance Indicator) es una herramienta que ayuda a las empresas a medir y monitorear su desempeño en función de objetivos específicos.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Cómo puede ayudarme un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">Un sistema KPI te permite tomar decisiones informadas basadas en datos reales, identificar áreas de mejora y optimizar tus procesos para alcanzar tus metas empresariales.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Es difícil implementar un sistema KPI?</h4>
+                        <p class="section_main_content_faq_item_a">No, nuestro sistema está diseñado para ser fácil de implementar y usar. Ofrecemos soporte y capacitación para asegurarnos de que puedas aprovechar al máximo sus beneficios.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Puedo personalizar los KPIs según mis necesidades?</h4>
+                        <p class="section_main_content_faq_item_a">Sí, nuestro sistema permite personalizar los KPIs para que se alineen con los objetivos específicos de tu empresa y sector.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿Ofrecen soporte técnico?</h4>
+                        <p class="section_main_content_faq_item_a">Sí, contamos con un equipo de soporte técnico disponible para ayudarte con cualquier duda o problema que puedas tener con el sistema.</p>
+                    </div>
+
+                    <div class="section_main_content_faq_item">
+                        <h4 class="section_main_content_faq_item_q">¿De dónde son?</h4>
+                        <p class="section_main_content_faq_item_a">Contamos con un equipo de profesionales en la zona centro de México, lo que nos permite ofrecer un servicio integral y adaptado a las necesidades de cada cliente en el bajío.</p>
                     </div>
                 </div>
 
-                <div class="main_content_graphic" id="kpi_graph">
+            </section>
+
+            <section class="section_main_footer">
+                <div class="footer_content">
+
+                    <div class="footer_section footer_company">
+                        <div class="footer_logo">
+                            <img src="https://didag.net/Static/img/DIDAGROUP.png" alt="DIDA GROUP Logo">
+                        </div>
+                        <p class="footer_description">
+                            Soluciones en tecnología que transforman datos en decisiones inteligentes.
+                        </p>
+                    </div>
+
+                    <div class="footer_section footer_contact">
+                        <h4 class="footer_title">Contacto</h4>
+
+                        <div class="footer_contact_info">
+                            <div class="contact_item">
+                                <span class="symbols">&#xe0c8;</span>
+                                <span>San Juan del Río, Qro, México</span>
+                            </div>
+
+                            <div class="contact_item">
+                                <span class="symbols">&#xe0be;</span>
+                                <a href="mailto:ventas@didag.net">ventas@didag.net</a>
+                            </div>
+
+                            <div class="contact_item">
+                                <span class="symbols">&#xe9cd;</span>
+                                <a href="https://wa.me/524272312080" target="_blank">+52 427 231 2080</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="main_content_indicators">
-
-                    <div class="main_content_indicators_item indicators_item-active" id="OEE_B" title="OEE Indicator (Clic to view graphic)">
-                        <div class="donut" id="oee_value" data-percent="0">
-                            <svg viewBox="0 0 36 36">
-                            <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <path class="meter" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="percentage">0.00%</text>
-                            </svg>
-                            <p>OEE</p>
-                        </div>
-                    </div>
-
-                    <div class="main_content_indicators_item" id="DIS_B" title="Disponibility Indicator (Clic to view graphic)">
-                        <div class="donut" id="dis_value" data-percent="0">
-                            <svg viewBox="0 0 36 36">
-                            <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <path class="meter" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="percentage">0.00%</text>
-                            </svg>
-                            <p>Disponibility</p>
-                        </div>
-                    </div>
-
-                    <div class="main_content_indicators_item" id="PER_B" title="Performance Indicator (Clic to view graphic)">
-                        <div class="donut" id="per_value" data-percent="0">
-                            <svg viewBox="0 0 36 36">
-                            <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <path class="meter" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="percentage">0.00%</text>
-                            </svg>
-                            <p>Performance</p>
-                        </div>
-                    </div>
-
-                    <div class="main_content_indicators_item" id="QUA_B" title="Quality Indicator (Clic to view graphic)">
-                        <div class="donut" id="qua_value" data-percent="0">
-                            <svg viewBox="0 0 36 36">
-                            <path class="bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <path class="meter" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
-                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="percentage">0.00%</text>
-                            </svg>
-                            <p>Quality</p>
-                        </div>
-                    </div>
-
-                </div>                
-            </div>
-
-            <div class="main_data_ghost">
-                <nav class="main_data">
-
-                    <div class="main_data_navegator">
-                        <ul class="main_data_nav">
-                            <li title="General Data" class="main_data_nav_option main_data_nav_option-active" id="gen_nav">Gen</li>
-                            <li title="Disponibility Data" class="main_data_nav_option" id="dis_nav">Dis</li>
-                            <li title="Performance Data" class="main_data_nav_option" id="per_nav">Per</li>
-                            <li title="Quality Data" class="main_data_nav_option" id="qua_nav">Qua</li>
-                        </ul>
-
-                        <div class="main_data_window">
-                            
-                            <div class="main_data_window_gen main_data_window-active" id="gen_win">
-                                <div class="main_data_window_title">
-                                    <p>General Data</p>
-                                </div>
-
-                                <div class="main_data_window_data">
-
-                                    <div class="main_data_window_device_state">
-                                        <div class="main_data_window_device_status" title="Current device mode">
-                                            <span id="monitoring_span" class="symbols"> &#xe30a; </span>
-                                            <p id="monitoring_p">Stand by</p>
-                                        </div>
-
-                                        <div class="main_data_window_device_status" title="Current device connection">
-                                            <span id="online_span" class="symbols"> &#xe875; </span>
-                                            <p id="online_p">Offline</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="main_data_window_device_state">
-                                        <div class="main_data_window_device_status" title="Power Supply Status">
-                                            <span id="power_span" class="symbols"> &#xe646; </span>
-                                            <p id="power_p">Power Supply</p>
-                                        </div>
-
-                                        <div class="main_data_window_device_status" title="Battery Status">
-                                            <span id="battery_span" class="symbols"> &#xe19c; </span>
-                                            <p id="battery_p">Battery</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="main_data_window_device_state">
-                                        <div class="main_data_window_device_status" title="Current interface connection">
-                                            <span id="interface_span" class="symbols"> &#xe30a; </span>
-                                            <p id="interface_p">Interface</p>
-                                        </div>
-
-                                        <div class="main_data_window_device_status" title="Current TCP connection">
-                                            <span id="tcp_span" class="symbols"> &#xe307; </span>
-                                            <p id="tcp_p">Remote</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="main_data_window_item">
-                                        <p>IP:</p>
-                                        <span title="Device IP" id="ip">0.0.0.0</span>
-                                    </div>
-                                    
-                                    <div class="main_data_window_item" title="Machine monitored">
-                                        <p>Machine:</p>
-                                        <span id="machine">-</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Worker in machine">
-                                        <p>Worker:</p>
-                                        <span id="worker">-</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Order loaded">
-                                        <p>Order:</p>
-                                        <span id="order">-</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Product in production">
-                                        <p>Product:</p>
-                                        <span id="product">-</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Group in production">
-                                        <p>Group:</p>
-                                        <span id="group">-</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Client in production">
-                                        <p>Client:</p>
-                                        <span id="client">-</span>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="main_data_window_dis" id="dis_win">
-                                <div class="main_data_window_title">
-                                    <p>Disponibility</p>
-                                </div>
-
-                                <div class="main_data_window_data">
-
-                                    <div class="main_data_window_item" title="Time monitored">
-                                        <p>Monitoring Time:</p>
-                                        <span id="monitoring_time">--:--:--</span>
-                                    </div>
-                                    
-                                    <div class="main_data_window_item" title="Current machine state">
-                                        <p>Live State:</p>
-                                        <span id="state">D-- -</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Last state change time">
-                                        <p>Last Change at:</p>
-                                        <span id="event">--:--:--</span>
-                                    </div>
-                                    
-                                    <div class="main_data_window_item" title="Time at monitoring started or finished">
-                                        <p id="start_cease_p">Started at:</p>
-                                        <span id="start_cease">--:--:--</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="List of reliefs">
-                                        <p>Reliefs:</p>
-                                        <span id="reliefs">-</span>
-                                    </div>
-
-                                    <div id="window_statecounters" class="main_data_window_statecounters">
-
-                                        <div id="codes_code" class="main_data_window_statecounters_column">
-                                        </div>
-                        
-                                        <div id="codes_time" class="main_data_window_statecounters_column">
-                                        </div>
-                        
-                                        <div id="codes_proportion" class="main_data_window_statecounters_column">
-                                        </div>
-                        
-                                        <div id="codes_name" class="main_data_window_statecounters_column">
-                                        </div>
-                        
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="main_data_window_per" id="per_win">
-                                <div class="main_data_window_title">
-                                    <p>Performance</p>
-                                </div>
-
-                                <div class="main_data_window_data">
-
-                                    <div class="main_data_window_item" title="Standard cycles per hour">
-                                        <p>Standard Cycle:</p>
-                                        <span id="standard">0 C/Hr</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Measured cycles per hour">
-                                        <p>Measured Cycle:</p>
-                                        <span id="measured">0 C/Hr</span>
-                                    </div>
-
-                                    <div class="main_data_window_graph" id="msr_graph">
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units produced per cycle">
-                                        <p>Cavities:</p>
-                                        <span id="cavities">0 U/C</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units produced">
-                                        <p>Units Produced:</p>
-                                        <span id="produced">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units to produce by time producing">
-                                        <p>Units To Produce:</p>
-                                        <span id="toproduce">0 U</span>
-                                    </div>
-                                    
-                                    
-
-                                </div>
-                            </div>
-
-                            <div class="main_data_window_qua" id="qua_win">
-                                <div class="main_data_window_title">
-                                    <p>Quality</p>
-                                </div>
-
-                                <div class="main_data_window_data">
-
-                                    <div class="main_data_window_item" title="Units accepted">
-                                        <p>Units Accepted:</p>
-                                        <span id="accepted">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units Reworked">
-                                        <p>Units Reworked:</p>
-                                        <span id="reworked">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units defective">
-                                        <p>Units Defective:</p>
-                                        <span id="defective">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units contaminated">
-                                        <p>Units Contaminated:</p>
-                                        <span id="contaminated">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_item" title="Units due machine adjustment">
-                                        <p>Units due Adjust:</p>
-                                        <span id="adjust">0 U</span>
-                                    </div>
-
-                                    <div class="main_data_window_production">
-
-                                        <div id="production_time" class="main_data_window_production_column">
-                                            <p>Time</p>
-                                            <p>--:--:--</p>
-                                        </div>
-
-                                        <div id="production_worker" class="main_data_window_production_column">
-                                            <p>Worker</p>
-                                            <p>-</p>
-                                        </div>
-
-                                        <div id="production_produced" class="main_data_window_production_column">
-                                            <p>Produced</p>
-                                            <p>0</p>
-                                        </div>
-
-                                        <div id="production_accepted" class="main_data_window_production_column">
-                                            <p>Accepted</p>
-                                            <p>0</p>
-                                        </div>
-
-                                        <div id="production_reworked" class="main_data_window_production_column">
-                                            <p>Reworked</p>
-                                            <p>0</p>
-                                        </div>
-
-                                        <div id="production_defective" class="main_data_window_production_column">
-                                            <p>Defective</p>
-                                            <p>0</p>
-                                        </div>
-
-                                        <div id="production_contaminated" class="main_data_window_production_column">
-                                            <p>Contaminated</p>
-                                            <p>0</p>
-                                        </div>
-
-                                        <div id="production_adjust" class="main_data_window_production_column">
-                                            <p>Adjust</p>
-                                            <p>0</p>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="main_data_inputs" title="Current inputs state">
-                        <span class="symbols" id="input_0"> &#xe837; </span>
-                        <span class="symbols" id="input_1"> &#xe837; </span>
-                        <span class="symbols" id="input_2"> &#xe837; </span>
-                        <span class="symbols" id="input_3"> &#xe837; </span>
-                        <span class="symbols" id="input_4"> &#xe837; </span>
-                        <span class="symbols" id="input_5"> &#xe837; </span>
-                    </div>
-
-                    <div class="main_data_complements">
-
-                        <ul class="main_data_complements_nav">
-                            <li title="Events list" class="main_data_complements_option main_data_complements_option-active" id="events_nav">Events</li>
-                            <li title="States list" class="main_data_complements_option" id="states_nav">States</li>
-                        </ul>
-
-                        <div class="main_data_complements_main">
-
-                            <div class="main_data_events_container main_data_complement-active" id="events_win">
-                                <div id="events_time" class="main_data_events_container_column">
-                                </div>
-    
-                                <div id="events_event" class="main_data_events_container_column">
-                                </div>
-                            </div>
-
-                            <div class="main_data_states_container" id="states_win">
-                                <div id="states_time" class="main_data_states_container_column">
-                                </div>
-
-                                <div id="states_worker" class="main_data_states_container_column">
-                                </div>
-    
-                                <div id="states_state" class="main_data_states_container_column">
-                                </div>
-
-                                <div id="states_name" class="main_data_states_container_column">
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </nav>
-
-                <p class="main_data_hidden">Device Information</p>
-            </div>
+                <div class="footer_bottom">
+                    <p class="footer_copyright">
+                        © 2025 DIDA GROUP. Todos los derechos reservados.
+                    </p>
+                </div>
+            </section>
 
         </main>
 
-        <footer>
-            <p>SERVER</p>
-        </footer>
+        <aside id="aside_header_nav" class="aside_header_nav">
+            <div class="aside_header_nav_content">
+                <div class="aside_header_nav_logo">
+                    <span class="aside_header_logo_img">
+                        <img src="https://didag.net/Static/img/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
+                    </span>
 
-        <aside id="menu_pages" class="submenu_pages">
-            <ul class="submenu_pages_list" id="pages_list">
-                <li class="submenu_pages_item" title="Monitoring Page">
-                    <span class="symbols"> &#xe335; </span>
-                    <p>Monitoring</p>
-                </li>
-
-                <li class="submenu_pages_item" title="Consult Page">
-                    <span class="symbols"> &#xe265; </span>
-                    <p>Consult</p>
-                </li>
-
-                <li class="submenu_pages_item" title="Senders Page">
-                    <span class="symbols"> &#xe8c7; </span>
-                    <p>Senders</p>
-                </li>
-
-                <li class="submenu_pages_item" title="QR Generator Page">
-                    <span class="symbols"> &#xef6b;</span>
-                    <p>QR Codes</p>
-                </li>
-
-                <li class="submenu_pages_item" title="Admin Page">
-                    <span class="symbols"> &#xe7fd; </span>
-                    <p>Admin</p>
-                </li>
-            </ul>
-        </aside>
-
-        <aside id="main_menu_dark" class="main_menu_dark">
-            <div class="main_menu_dark_box">
-            </div>
-        </aside>
-
-        <aside id="session_prompt" class="prompt_session">
-            <div class="session_content">
-
-                <div class="session_header">
-                    <span id="close_session_prompt" class="symbols">&#xe5cd;</span>
+                    <span class="symbols aside_header_logo_span" id="aside_header_nav_close">&#xe5cd;</span>
                 </div>
 
-                <div class="session_main">
+                <ul class="aside_header_nav_list">
+                    <li class="aside_header_nav_item-active">Inicio</li>
+                    <li>Servicios</li>
+                    <li>Contacto</li>
+                    <li>FAQ</li>
+                </ul>
 
-                    <div class="session_main_message">
-                        <p id="prompt_message">Sign in</p>
-                    </div>
-
-                    <div class="session_main_icon">
-                        <span class="symbols"> &#xe7fd; </span>
-                    </div>
-
-                    <form action="" class="session_main_form" id="form_login">
-
-                        <div class="session_main_form_inputs" id="form_inputs">
-
-                            <div class="session_main_form_input">
-                                <label class="input_label" for="user_email" title="Enter email">Email:</label>
-                                <input class="input" id="user_email" type="email" name="email" placeholder="email@domain.com" autocomplete="off">
-                                <p class="input_error" id="user_email_error">Email sintax error</p>
-                            </div>
-        
-                            <div class="session_main_form_input">
-                                <label class="input_label" for="user_pass" title="Enter password">Password:</label>
-                                <input class="input" id="user_pass" type="password" name="password" placeholder="password" autocomplete="off">
-                                <p class="input_error" id="user_pass_error">Pass may content 8-16 chars</p>
-                            </div>
-
-                        </div>
-
-                        <div class="session_main_form_button">
-                            <button class="button" id="login_button" type="submit" disabled title="User session">Log in</button>
-                        </div>
-
-                    </form>
-                    
+                <div class="aside_header_nav_contact">
+                    <a href="mailto:ventas@didag.net" class="symbols">&#xe0be;</a>
+                    <a href="https://wa.me/524272312080" target="_blank" class="symbols">&#xe9cd;</a>
                 </div>
-                
-                <div class="session_footer">
-                    <span class="symbols session_footer_spinner" id="prompt_loader"> &#xe627;</span>
-                    <p class="session_footer_message" id="prompt_response">Session Required</p>
+
+                <div class="aside_header_nav_bottom">
+                    <p>© 2025 DIDA GROUP.</p>
+                    <p>Todos los derechos reservados.</p>
                 </div>
 
             </div>
         </aside>
 
-        <aside id="prompt_sync" class="prompt_sync">
-            <div class="prompt_sync_content">
-                <span class="symbols">&#xe86a;</span>
-                <p id="prompt_sync_text">Waiting session</p>
-            </div>
-        </aside>
+        <script src="https://didag.net/Static/jquery.js"></script>
+        <script src="/Static/landing/script.js"></script>
 
-        <aside id="notification0" class="notifications notification-inactive">
-            <div class="notification_content">
-                <div class="notification_icon">
-                    <span id="notification0_icon" class="symbols"> &#xe002; </span>
-                </div>
-
-                <div class="notification_main">
-                    <p id="notification0_title" class="notification_title">Title</p>
-                    <p id="notification0_text" class="notification_text">Message</p>
-                </div>
-
-                <div class="notification_close">
-                    <span id="notification0_close" class="symbols"> &#xe5cd; </span>
-                </div>
-            </div>
-        </aside>
-
-        <aside id="notification1" class="notifications notification-inactive">
-            <div class="notification_content">
-                <div class="notification_icon">
-                    <span id="notification1_icon" class="symbols"> &#xe002; </span>
-                </div>
-
-                <div class="notification_main">
-                    <p id="notification1_title" class="notification_title">Title</p>
-                    <p id="notification1_text" class="notification_text">Message</p>
-                </div>
-
-                <div class="notification_close">
-                    <span id="notification1_close" class="symbols"> &#xe5cd; </span>
-                </div>
-            </div>
-        </aside>
-
-        <aside id="notification2" class="notifications notification-inactive">
-            <div class="notification_content">
-                <div class="notification_icon">
-                    <span id="notification2_icon" class="symbols"> &#xe002; </span>
-                </div>
-
-                <div class="notification_main">
-                    <p id="notification2_title" class="notification_title">Title</p>
-                    <p id="notification2_text" class="notification_text">Message</p>
-                </div>
-
-                <div class="notification_close">
-                    <span id="notification2_close" class="symbols"> &#xe5cd; </span>
-                </div>
-            </div>
-        </aside>
-
-
-
-        <aside id="main_data_window_production_clone" class="main_data_window_data_clone">
-            <div class="main_data_window_production_clone">
-                <div id="production_time_clone" class="main_data_window_production_column">
-                    <p>Time</p>
-                    <p>--:--:--</p>
-                </div>
-
-                <div id="production_worker_clone" class="main_data_window_production_column">
-                    <p>Worker</p>
-                    <p>-</p>
-                </div>
-
-                <div id="production_produced_clone" class="main_data_window_production_column">
-                    <p>Produced</p>
-                    <p>0</p>
-                </div>
-
-                <div id="production_accepted_clone" class="main_data_window_production_column">
-                    <p>Accepted</p>
-                    <p>0</p>
-                </div>
-
-                <div id="production_reworked_clone" class="main_data_window_production_column">
-                    <p>Reworked</p>
-                    <p>0</p>
-                </div>
-
-                <div id="production_defective_clone" class="main_data_window_production_column">
-                    <p>Defective</p>
-                    <p>0</p>
-                </div>
-
-                <div id="production_contaminated_clone" class="main_data_window_production_column">
-                    <p>Contaminated</p>
-                    <p>0</p>
-                </div>
-
-                <div id="production_adjust_clone" class="main_data_window_production_column">
-                    <p>Adjust</p>
-                    <p>0</p>
-                </div>
-            </div>
-        </aside>
-
-        <script src="/Static/jquery.js"></script>
-        <script src="/Static/chart.js"></script>
-        <script src="/Static/template.js"></script>
-        <script src="/Static/home/script.js"></script>
-		
-	</body>
+    </body>
 </html>
