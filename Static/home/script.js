@@ -190,7 +190,7 @@ $(document).ready(function() {
 
         // Phone validation
         const phone = $('#phone_input').val();
-        if (phone && !phoneRegex.test(phone)) {
+        if (phone && !validateMexPhone(phone)) {
             $('#phone_error').text('Formato de teléfono inválido').show();
             isValid = false;
         }
