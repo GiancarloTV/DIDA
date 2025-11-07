@@ -3,7 +3,7 @@
 @brief HTTP server for KPI SYSTEM
 @author Ing Giancarlo TV
 @date Last revision: September 19th 2025
-@copyright (c) 2024 by Giancarlo TV. DIDA GROUP
+@copyright (c) 2025 by Giancarlo TV. DIDA GROUP
 """
 
 #---------------RESOURCES---------------
@@ -120,15 +120,11 @@ def home():
 #! -------------------ERROR WEB PAGE----------------
 @app.error(code=500)
 def error_500(error):
-    return template('error', error_message = "Internal server error", error_code = 500)
-
-@app.error(code=405)
-def error_405(error):
-    return template('error', error_message = 'Method not allowed', error_code = 405)
+    return template('error', error_message = f"Error interno del servidor: {error}", error_code = 500)
 
 @app.error(code=404)
 def error_404(error):
-    return template('error', error_message = "We can't seem to find the page you're looking for", error_code = 404)
+    return template('404', error_message = "Página no encontrada", error_code = 404)
 
 
 #* -------------------COMPANY----------------

@@ -4,15 +4,15 @@
     width: 100dvw;
     
     text-align: center;
-    color: var(--supertext-color);
-    font-size: var(--supertext-size);
+    color: #dcdcdc;
+    font-size: 2vh;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: #282828;
+    background: linear-gradient(46deg, #1a1a1a 0%, #2c3e50 100%);
 }
 
 /** ========== SPINNER ========== */
@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
 
-    border: 1dvh solid #606060;
+    border: 1dvh solid t;
     border-top: 1dvh solid var(--color-red);
     border-radius: 50%;
     margin: 2dvh auto;
@@ -85,4 +85,12 @@
 @keyframes counter-spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(-360deg); }
+}
+
+/*? === MEDIA QUERY TABLET ===  */
+
+@media screen and (max-width: 769px) {
+    .logo_container {
+        top: -2dvh;
+    }
 }

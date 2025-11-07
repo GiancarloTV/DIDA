@@ -31,6 +31,14 @@
     --section-description-f-color : red;
     --section-description-t-color : blue;
 
+    /* variables para el aside_message (fáciles de ajustar) */
+    --aside-bg: #ffffff;
+    --aside-veil: rgba(16,22,26,0.45);
+    --aside-shadow: rgba(15,23,42,0.15);
+    --aside-accent: #2c3e50;
+    --aside-radius: 5vh; /* se mantiene la proporción original */
+    --transparent-color : #00000070;
+
 }
 
 @font-face {
@@ -1674,9 +1682,114 @@ h3 {
     margin: 0;
 }
 
+/*? === ASIDE MESSAGE ===  */
+
+.aside_message {
+    height: 100vh;
+    width: 100dvw;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 50;
+    overflow: hidden;
+
+    backdrop-filter: blur(4px) saturate(.95);
+    background-color: var(--aside-veil);
+    -webkit-backdrop-filter: blur(4px) saturate(.95);
+    transition: background-color 220ms ease;
+}
+
+.aside_message_content {
+    height: 40%;
+    width: 40%;
+    min-width: 320px;
+    max-width: 880px;
+    min-height: 280px;
+
+    position: absolute;
+    top: 50dvh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--aside-radius);
+    padding: 3vh 3.5vw;
+
+    background-color: var(--aside-bg);
+    box-shadow: 0 18px 48px var(--aside-shadow), 0 2px 6px rgba(0,0,0,0.06);
+    color: var(--aside-accent);
+    will-change: transform, opacity;
+}
+
+.aside_message_title {
+    height: 20%;
+    width: 90%;
+
+    text-align: center;
+    font-size: 5vh;
+    color: var(--aside-accent);
+    margin: 0.2rem 0 0.6rem 0;
+    font-weight: 600;
+}
+
+.aside_message_description {
+    height: 50%;
+    width: 90%;
+
+    font-size: 3vh;
+    color: #2f4050;
+    line-height: 1.35;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    
+    overflow: auto; /* por si hay texto largo */
+}
+
+.aside_message_content .cta-a {
+    max-height: 20%;
+    max-width: 80%;
+    margin-top: 1.2rem;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .aside_message, .aside_message_content{ transition: none; }
+}
+
 /*? === MEDIA QUERY ===  */
 
 @media screen and (max-width: 768px) {
+
+    .aside_message {
+        backdrop-filter: blur(6px) saturate(.95);
+        background-color: rgba(16,22,26,0.55);
+    }
+
+    .aside_message_content {
+        width: 90%;
+        height: 40%;
+        left: 50vw;
+        top: 50dvh;
+        transform: translate(-50%, -50%);
+        padding: 4vh 5vw;
+        border-radius: 3.5vh;
+    }
+
+    .aside_message_title {
+        font-size: 6.5vw;
+    }
+
+    .aside_message_description {
+        font-size: 3.8vw;
+    }
+
 
     /*? === HEADER ===  */
 

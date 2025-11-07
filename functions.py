@@ -4,7 +4,7 @@
 @brief System functions and classes to use in the WEB PAGE
 @author Ing Giancarlo TV
 @date Last revision: October 29th 2025
-@copyright (c) 2024 by Giancarlo TV. DIDA GROUP
+@copyright (c) 2025 by Giancarlo TV. DIDA GROUP
 """
 
 # IMPORT COLORS
@@ -73,7 +73,7 @@ def upload_file (token: str, local_path:str, repo_path:str, commit_comment:str, 
 
         code = response.status_code
 
-        log(TAB2, "", f"  Upload: {local_path} to {REPOSITORY}/{repo_path}", GREEN if (code == 200 or code == 201) else RED)
+        log(TAB2, "", f"Uploaded: {local_path} to {REPOSITORY}/{repo_path}", GREEN if (code == 200 or code == 201) else RED)
     
     except requests.RequestException as e:
         log(TAB2, "", f"Upload error: {local_path} to {REPOSITORY}/{repo_path} {e}", RED)
@@ -821,7 +821,7 @@ class SystemClass:
                 log(TAB2, "", f"User {email} already exists", RED)
                 return {
                     'Success' : False,
-                    'Error'   : 'User already exists'
+                    'Error'   : 'El correo ya fue registrado'
                 }
             
         date = get_date(format='%Y/%m/%d %H:%M:%S')

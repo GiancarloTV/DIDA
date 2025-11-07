@@ -11,9 +11,9 @@
         if (server_config) {
           
           if (server_config['MAINTENANCE'] === true) {
-            $('#status').text('Sorry, we are under maintenance.');
+            $('#status').text('Lo sentimos, la página solicitada se encuentra en mantenimiento.');
           } else {
-            $('#status').text('Redirecting');
+            $('#status').text('Redirigiendo...');
             setTimeout(function() {
               window.location.href = '/home';
             }, 2000);

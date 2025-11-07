@@ -2,7 +2,7 @@
 <html lang="es">
 
 	<head>
-		<title>KPI Server {error_code}</title>
+		<title>KPI Server 404</title>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -27,8 +27,8 @@
         <main class="section_main">
 
             <div class="section_main_error">
-                <h1>{error_code}</h1>
-                <p>{{error_message}}</p>
+                <h1>404</h1>
+                <p>La página que buscas no se ha encontrado.</p>
                 <a href="/" class="cta-a">Volver al inicio</a>
             </div>
 

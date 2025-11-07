@@ -2,10 +2,10 @@
 <html lang="es">
     <head>
         <title>DIDA GROUP - Home</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-        <meta name="theme-color" content="#101010">
+        <meta name="theme-color" content="#000000">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
@@ -335,6 +335,16 @@
                     <p>© 2025 DIDA GROUP.</p>
                     <p>Todos los derechos reservados.</p>
                 </div>
+
+            </div>
+        </aside>
+
+        <aside id="aside_message" class="aside_message">
+            <div class="aside_message_content">
+                
+                <h4 class="aside_message_title" id="aside_message_title">Título</h4>
+                <p class="aside_message_description" id="aside_message_description">Descripción del mensaje.</p>
+                <button class="cta-a" id="aside_message_button">Aceptar</button>
 
             </div>
         </aside>

@@ -113,6 +113,11 @@ $(document).ready(function() {
         }
     });
 
+    const aside_message         = $('#aside_message');
+    const aside_message_title   = $('#aside_message_title');
+    const aside_message_text    = $('#aside_message_description');
+    const aside_message_button  = $('#aside_message_button');
+
     animateFocus(current_y);
     $(window).on('scroll', function() {
         const y = $(this).scrollTop();
@@ -124,6 +129,15 @@ $(document).ready(function() {
 
             if ($('#aside_header_nav').is(':visible')) {
                 $('#aside_header_nav').fadeOut(300);
+            };
+
+            if (aside_message.is(':visible')) {
+                aside_message.fadeOut(300);
+
+                setTimeout(() => {
+                    aside_message_title.text('Título');
+                    aside_message_text.text('Descripción del mensaje.');
+                }, 300);
             };
         }
         // console.log('Scroll:', y);
@@ -160,13 +174,21 @@ $(document).ready(function() {
         }
     });
 
+    aside_message_button.on('click', function() {
+        aside_message.fadeOut(300);
+
+        setTimeout(() => {
+            aside_message_title.text('Título');
+            aside_message_text.text('Descripción del mensaje.');
+        }, 300);
+
+    });
+
     $('#send_button').on('click', function(e) {
         e.preventDefault();
         
-        // Basic form validation
         let isValid = true;
-        
-        // Check each required field
+
         const fields = ['name_input', 'company_input', 'email_input', 'phone_input', 'message_input'];
         
         fields.forEach(function(fieldId) {
@@ -194,6 +216,8 @@ $(document).ready(function() {
             $('#phone_error').text('Formato de teléfono inválido').show();
             isValid = false;
         }
+
+        aside_message.css('top', $(window).scrollTop());
         
         if (isValid) {
             
@@ -220,7 +244,11 @@ $(document).ready(function() {
             })
             .then (data => {
                 if (data.Success) {
-                    alert('¡Formulario enviado exitosamente! Nos pondremos en contacto contigo pronto.');
+
+                    aside_message_title.text('¡Hecho!');
+                    aside_message_text.text('Nos pondremos en contacto contigo pronto.');
+                    aside_message_button.text('Cerrar');
+                    aside_message.fadeIn(300);
 
                     fields.forEach(function(fieldId) {
                         const field = $('#' + fieldId);
@@ -228,12 +256,20 @@ $(document).ready(function() {
                         field.val('');
                     });
                 } else {
-                    alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
                     console.error('Server error:', data.Error);
+                    
+                    aside_message_title.text('Error');
+                    aside_message_text.text(`No se pudo enviar el formulario.\nError: ${data.Error}`);
+                    aside_message_button.text('Cerrar');
+                    aside_message.fadeIn(300);
                 }
             }).catch(error => {
-                alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
                 console.error('Network error:', error);
+                
+                aside_message_title.text('Error');
+                aside_message_text.text('No se pudo enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+                aside_message_button.text('Cerrar');
+                aside_message.fadeIn(300);
             });
         }
     });

@@ -3,7 +3,7 @@
 @brief Constats for WEB PAGE
 @author Ing Giancarlo TV
 @date Last revision: October 29th 2025
-@copyright (c) 2024 by Giancarlo TV. DIDA GROUP
+@copyright (c) 2025 by Giancarlo TV. DIDA GROUP
 """
 
 
