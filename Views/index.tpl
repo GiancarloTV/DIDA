@@ -2,7 +2,25 @@
 <html lang="es">
     <head>
         <title>DIDA GROUP</title>
-        
+        <!-- Open Graph / Social preview -->
+        <meta property="og:title" content="DIDA GROUP">
+        <meta property="og:description" content="DIDA GROUP — soluciones en tecnología.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://didag.net/">
+        <meta property="og:image" content="https://didag.net/Static/img/DIDAGROUP.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="DIDA GROUP">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="DIDA GROUP">
+        <meta name="twitter:description" content="DIDA GROUP — soluciones en tecnología.">
+        <meta name="twitter:image" content="https://didag.net/Static/img/DIDA.png">
+
+        <!-- Fallback -->
+        <link rel="image_src" href="https://didag.net/Static/img/DIDAGROUP.png">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#000000">

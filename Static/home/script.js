@@ -221,8 +221,8 @@ $(document).ready(function() {
         
         if (isValid) {
             
-            // fetch('https://pedagogically-nonactinic-arline.ngrok-free.dev/form/contact', {
-            fetch('/form/contact', {
+            fetch('https://pedagogically-nonactinic-arline.ngrok-free.dev/form/contact', {
+            // fetch('/form/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
