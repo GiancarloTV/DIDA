@@ -97,14 +97,14 @@ h3 { font-size: clamp(1.2rem, 3.2vw, 2rem); }
 }
 
 .section_main span {
-    font-size: clamp(6rem, 24vw, 40vh);
-    color: var(--accent);
+    font-size: clamp(6rem, 27vw, 45vh);
+    color: red;
     filter: drop-shadow(0 14px 30px rgba(0,0,0,0.6));
 
-    animation: blink 1s linear infinite;
+    animation: blink 1s ease-in infinite;
 }
 
 @keyframes blink {
-    0%, 100% { scale: 1.5; }
-    50% { scale: 0.5; }
+    0%, 100% { scale: 1.2; }
+    50% { scale: 0.8; }
 }

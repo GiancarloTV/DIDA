@@ -18,9 +18,9 @@
 
         <main class="section_main">
 
-            <h4>Text Message</h4>
+            <h4>Estás bien bonita Alondrita</h4>
 
-            <span class="symbols">&#xe96b;</span>
+            <span class="symbols">&#xe87d;</span>
 
         </main>
         
