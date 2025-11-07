@@ -35,7 +35,7 @@
         <link rel="preload" href="/Static/home/script.js" as="script">
         <link rel="preload" href="https://didag.net/Static/img/DIDAGROUP.png" as="image">
         <link rel="preload" href="https://didag.net/Static/img/bg.png" as="image">
-        <link rel="preload" href="https://didag.net/Static/img/contact.png" as="image">
+        <link rel="preload" href="https://didag.net/Static/img/email.png" as="image">
     </head>
 
     <body>

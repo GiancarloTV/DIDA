@@ -185,7 +185,7 @@
 
                 <div class="section_main_content_form">
                     <div class="section_main_content_form_img" id="section_form_img">
-                        <img src="https://didag.net/Static/img/contact.png" alt="Contact Image">
+                        <img src="https://didag.net/Static/img/email.png" alt="Contact Image">
                     </div>
 
                     <form class="section_main_content_form_wrap">
