@@ -108,13 +108,13 @@ def welcome(window: WindowNames = WindowNames.APP) -> None:
     print(f"\n{word:>30}{color("GROUP", RED)}")
 
     if window == WindowNames.APP:
-        word = 'KPI'
+        word = 'APPWEB'
         print(f"\n{word:>30}{color("SYSTEM", CYAN)}")
         log("", "", "System started  Close: [Ctrl+C]", BLACK, True)
 
     elif window == WindowNames.SRVR_HTTP:
-        word = 'HTTP'
-        print(f"\n{word:>30}{color("SERVER", YELLOW)}")
+        word = 'APPWEB'
+        print(f"\n{word:>30}{color("HTTP", YELLOW)}")
         log("", "", "Server window started", BLACK, True)
 
     else:

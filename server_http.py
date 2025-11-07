@@ -116,6 +116,12 @@ def home():
 
     return template('home')
 
+@app.route('/lol')
+def lol():
+    server_request(True)
+
+    return template('1009_amsc')
+
 
 #! -------------------ERROR WEB PAGE----------------
 @app.error(code=500)
@@ -275,7 +281,7 @@ def serve_static(page, filename):
 #todo ------------------MAIN-----------------
 if __name__ == '__main__':
     error: bool = False
-    set_title("KPI HTTP")
+    set_title("APP WEB HTTP")
 
     try:
         welcome(window=WindowNames.SRVR_HTTP)

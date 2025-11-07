@@ -44,7 +44,7 @@ if __name__ == "__main__":
     error: bool = False
     close_window: bool = False
 
-    set_title("KPI SYSTEM")
+    set_title("APP WEB")
 
     try:
         welcome()

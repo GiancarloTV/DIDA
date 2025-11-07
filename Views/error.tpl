@@ -2,7 +2,7 @@
 <html lang="es">
 
 	<head>
-		<title>KPI Server {error_code}</title>
+		<title>DIDAGROUP - {{error_code}}</title>
 		<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -27,13 +27,13 @@
         <main class="section_main">
 
             <div class="section_main_error">
-                <h1>{error_code}</h1>
+                <h1>{{error_code}}</h1>
                 <p>{{error_message}}</p>
                 <a href="/" class="cta-a">Volver al inicio</a>
             </div>
 
             <div class="section_main_icon">
-                <span class="symbols">&#xe000;</span>
+                <span class="symbols">&#xe96b;</span>
             </div>
 
         </main>
