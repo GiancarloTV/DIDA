@@ -16,16 +16,70 @@ from constants import FileType
 # IMPORT PATH NAMES
 from constants import SystemPaths
 # GENERAL FUNCTIONS
-from time import time
 from datetime import datetime
-from datetime import timedelta
-from calendar import monthrange
 # VARTYPES
 from constants import Mode
 from pandas.core.frame import DataFrame
 from subprocess import Popen
-from asyncio import StreamReader, StreamWriter
 import traceback
+
+#? REPOSITORY
+import requests
+import base64
+
+
+def upload_folder (token: str, local_path: str, repo_path: str, commit_comment: str, begin_enline: bool = True) -> bool:
+    log(TAB2, "", f"Uploading {local_path} to {REPOSITORY}/{repo_path}", BLACK, begin_enline)
+
+    for root, dirs, files in os.walk(local_path):
+        for file_name in files:
+            file_path = construct_path(part_one=root, part_two=file_name)
+            relative_path = os.path.relpath(file_path, local_path)
+
+            github_file_path = construct_path(part_one=repo_path, part_two=relative_path).replace("\\", "/")
+            upload_file(token=token, local_path=file_path, repo_path=github_file_path, commit_comment=commit_comment)
+
+def upload_file (token: str, local_path:str, repo_path:str, commit_comment:str, overwrite: bool = False):
+    try:
+        url = f"https://api.github.com/repos/GiancarloTV/{REPOSITORY}/contents/{repo_path}"
+
+        headers = {
+            "Authorization": f"token {token}",
+            "Accept": "application/vnd.github.v3+json"
+        }
+
+        sha = None
+        response_get = requests.get(url, headers=headers)
+        if response_get.status_code == 200:
+            if overwrite:
+                sha = response_get.json().get("sha")
+            else:
+                log(TAB2, "", f" Skipped  {local_path} to {REPOSITORY}/{repo_path}", BLACK)
+                return
+
+        with open(local_path, "rb") as file:
+            content = file.read()
+            content_encoded = base64.b64encode(content).decode('utf-8')
+
+        data = {
+            "message": commit_comment,
+            "content": content_encoded
+        }
+
+        if sha:
+            data['sha'] = sha
+
+        response = requests.put(url=url, headers=headers, json=data)
+
+        code = response.status_code
+
+        log(TAB2, "", f"  Upload: {local_path} to {REPOSITORY}/{repo_path}", GREEN if (code == 200 or code == 201) else RED)
+    
+    except requests.RequestException as e:
+        log(TAB2, "", f"Upload error: {local_path} to {REPOSITORY}/{repo_path} {e}", RED)
+
+    except Exception as e:
+        log(TAB2, "", f"File error: {local_path}: {e}", RED) 
 
 # GENERAL
 
@@ -606,17 +660,30 @@ class SystemClass:
         self.config_path      = None
         self.version_path     = None
 
+        self.users_path      = None
+        self.users_data = DataFrame ({
+            'Name'      :   [],
+            'Company'   :   [],
+            'Email'     :   [],
+            'Phone'     :   [],
+            'Message'   :   [],
+            'Date'      :   []
+        })
+
+        self.license_path     = None
         self.local_window = window
 
         self.server_data = {
-            "HTTP_PORT" : 80
+            "HTTP_PORT"     : 80,
+            "MAINTENANCE"   : False,
+            "SYNC"          : False
         }
 
         self.version_data = {
-            "APP": {
-                "Version": "0.0.1",
-                "Date": "01/01/2000"
-            }
+            "Version": "0.0.1",
+            "Date": get_date(format='%d/%m/%Y'),
+            "LastModified": get_date(format='%d/%m/%Y'),
+            "Author" : "Ing Giancarlo TV"
         }
 
     def verify_resources (self) -> None:
@@ -627,12 +694,14 @@ class SystemClass:
         self.sys_path = self.verify_folder()
         self.config_path        = self.verify_file(SystemPaths.CONFIG, self.server_data)
         self.exceptions_path    = self.verify_file(SystemPaths.EXCEPTIONS, '')
+        self.users_path = self.verify_file(SystemPaths.USERS, self.users_data)
+        self.version_path = self.verify_file(SystemPaths.VERSION, self.version_data)
 
-        if self.local_window == WindowNames.SRVR_HTTP:
-            self.version_path = self.verify_file(SystemPaths.VERSION, self.version_data)
+        self.license_path = construct_path(part_one=self.sys_path, part_two=SystemPaths.LICENSE)
+        if not verify_path(path=self.license_path):
+            raise Exception('License invalid')
 
-        else:
-            self.version_path = self.verify_file(SystemPaths.VERSION, self.version_data)
+        if self.local_window != WindowNames.SRVR_HTTP:
             self.read_write_file(SystemPaths.EXCEPTIONS, '')
 
     def verify_file (self, file: str, init: (str | dict | DataFrame)) -> str:
@@ -684,6 +753,16 @@ class SystemClass:
         elif mode == Mode.READ:
             return read_file(path=file_path)
 
+    def read_license (self) -> str:
+        with open(self.license_path, Mode.READ) as file:
+            license_encoded = file.read().strip()
+
+        license_bytes = base64.b64decode(license_encoded)
+        license = license_bytes.decode('utf-8')
+
+        return license
+    
+
     def server_config (self, http: int = 80, new: bool = False, network: (NetworkClass | None) = None) -> dict:
         config = read_file(path=self.config_path)
 
@@ -731,6 +810,50 @@ class SystemClass:
             return True
         
         return False
+
+
+    def users_add (self, name: str, company : str, email: str, phone: str, message: (str | None)) -> dict:
+        users_pre = read_file(path=self.users_path)
+
+        if users_pre is not None:
+            mask = users_pre['Email'] == email
+            if mask.any():
+                log(TAB2, "", f"User {email} already exists", RED)
+                return {
+                    'Success' : False,
+                    'Error'   : 'User already exists'
+                }
+            
+        date = get_date(format='%Y/%m/%d %H:%M:%S')
+
+        users_new = pd.DataFrame({
+            'Name'      :   [name],
+            'Company'   :   [company],
+            'Email'     :   [email],
+            'Phone'     :   [phone],
+            'Message'   :   [message if message is not None else ''],
+            'Date'      :   [date]
+        })
+
+        if users_pre is None or users_pre.empty:
+            write_file(path=self.users_path, data=users_new)
+        
+        else:
+            data = pd.concat([users_pre, users_new], ignore_index=True)
+            write_file(path=self.users_path, data=data)
+
+        log(TAB2, "", f"Contact form submitted:", GREEN)
+        log(TAB3, "", f"Name:       {name}", BLACK)
+        log(TAB3, "", f"Company:    {company}", BLACK)
+        log(TAB3, "", f"Email:      {email}", BLACK)
+        log(TAB3, "", f"Phone:      {phone}", BLACK)
+        log(TAB3, "", f"Message:    {message}", BLACK)
+        log(TAB3, "", f"Date:       {date}", BLACK)
+
+        self.server_exception(error='upload')
+        return {
+            'Success' : True
+        }
 
 
 # ----------------WINDOWS----------------

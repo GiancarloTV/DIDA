@@ -16,7 +16,7 @@ try:
     from constants import WindowNames
     from constants import Mode
     # IMPORT SYSTEM RESOURCES
-    from functions import (color, welcome, get_date, construct_path, read_file, log, set_title)
+    from functions import (color, welcome, get_date, construct_path, read_file, log, set_title, upload_file)
     from time import sleep as wait
     from time import time as elapsed
     from datetime import datetime, timedelta
@@ -36,6 +36,8 @@ window: (WindowClass | None)    = None
 system: (SystemClass | None)    = None
 network : (NetworkClass | None) = None
 
+sync: bool = False
+
 #------------------MAIN-----------------
 
 if __name__ == "__main__":
@@ -53,7 +55,8 @@ if __name__ == "__main__":
 
         config_file = system.server_config()
 
-        http_port       = config_file["HTTP_PORT"]
+        http_port   = config_file["HTTP_PORT"]
+        sync        = config_file["SYNC"]
         
         log(TAB1, SYS, "Checking network connection", BLACK, True)
         network = NetworkClass()
@@ -111,7 +114,20 @@ if __name__ == "__main__":
                         raise Exception(f'Window {WindowNames.SRVR_HTTP} in window.alive() error')
 
             if system.server_exception():
-                raise Exception(system.exceptions_text)
+                error_text = system.exceptions_text
+
+                if error_text == 'upload':
+                    config_file = system.server_config()
+                    sync        = config_file["SYNC"]
+                    
+                    system.read_write_file(SystemPaths.EXCEPTIONS, '')
+                    log(TAB1, SYS, "New user registered", CYAN, True)
+
+                    if sync:
+                        log(TAB1, SYS, "Uploading users to server", BLACK, True)
+                        upload_file(token=system.read_license(), local_path=system.users_path, repo_path='Sys/Users.csv', commit_comment="New User Added", overwrite=True)
+                else:
+                    raise Exception(error_text)
             
             wait(1)
         

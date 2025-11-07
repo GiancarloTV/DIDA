@@ -193,19 +193,9 @@ def contact_form():
     phone    = request.json.get('phone')
     message  = request.json.get('message')
 
-    date = get_date(format='%Y-%m-%d %H:%M:%S')
-
     if name and company and email and phone:
-        log(TAB2, "", f"Contact form submitted:", GREEN)
-        log(TAB3, "", f"Name:       {name}", BLACK)
-        log(TAB3, "", f"Company:    {company}", BLACK)
-        log(TAB3, "", f"Email:      {email}", BLACK)
-        log(TAB3, "", f"Phone:      {phone}", BLACK)
-        log(TAB3, "", f"Message:    {message}", BLACK)
-        log(TAB3, "", f"Date:       {date}", BLACK)
-
         response.status = 200
-        return {'success': 'Form submitted successfully'}
+        return system.users_add(name=name, company=company, email=email, phone=phone, message=message)
 
     response.status = 400
     log(TAB2, "", "Error, empty data", RED)

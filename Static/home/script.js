@@ -197,7 +197,8 @@ $(document).ready(function() {
         
         if (isValid) {
             
-            fetch('https://pedagogically-nonactinic-arline.ngrok-free.dev/form/contact', {
+            // fetch('https://pedagogically-nonactinic-arline.ngrok-free.dev/form/contact', {
+            fetch('/form/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -209,8 +210,16 @@ $(document).ready(function() {
                     phone: $('#phone_input').val(),
                     message: $('#message_input').val()
                 })
-            }).then(response => {
+            })
+            .then (response => {
                 if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then (data => {
+                if (data.Success) {
                     alert('¡Formulario enviado exitosamente! Nos pondremos en contacto contigo pronto.');
 
                     fields.forEach(function(fieldId) {
@@ -220,9 +229,11 @@ $(document).ready(function() {
                     });
                 } else {
                     alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+                    console.error('Server error:', data.Error);
                 }
             }).catch(error => {
                 alert('Error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+                console.error('Network error:', error);
             });
         }
     });

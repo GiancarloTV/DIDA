@@ -55,6 +55,8 @@ class SystemPaths:
     EXCEPTIONS  = 'Exceptions.txt'  # Exceptions file
     CONFIG      = 'Config.json'     # Configuration file
     VERSION     = 'Version.json'    # Version file
+    USERS       = 'Users.csv'       # Users file
+    LICENSE     = 'license.key'     # License file
 
 
 # System log tags
@@ -67,4 +69,4 @@ NETWORK_TIMEOUT = 300     # Network timeout in seconds
 PING_TIMEOUT = 30         # Ping timeout in seconds
 
 # ROOT
-REPOSITORY = "DIDA"  # Repository name
+REPOSITORY = "DIDAGROUP"  # Repository name

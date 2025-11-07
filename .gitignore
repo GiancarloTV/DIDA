@@ -22,3 +22,6 @@ rad.json
 TestResults.xml
 # Python app
 __pycache__/
+/Sys/license.key
+/Sys/Users.csv
+/Sys/Exceptions.txt
