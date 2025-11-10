@@ -19,7 +19,7 @@ try:
     from constants import Mode
 
     # IMPORT SYSTEM RESOURCES
-    from functions import (color, welcome, get_date, get_directory_path, verify_path, construct_path, read_file, write_file, log, set_title)
+    from functions import (color, welcome, get_date, get_directory_path, verify_path, construct_path, read_file, write_file, log, set_title, copy_path)
     from functions import SystemClass
     from functions import NetworkClass
 
@@ -108,28 +108,36 @@ def add_ngrok_skip_header():
 def index():
     server_request(True)
 
+    copy_path(source='./Views/index.tpl', destination='./index.html')
+
     return template('index')
 
 @app.route('/home')
 def home():
     server_request(True)
 
+    copy_path(source='./Views/home.tpl', destination='./home.html')
+
     return template('home')
 
-@app.route('/lol')
-def lol():
+@app.route('/AMSC')
+def amsc():
     server_request(True)
 
-    return template('1009_amsc')
+    copy_path(source='./Views/AMSC.tpl', destination='./AMSC.html')
+
+    return template('AMSC')
 
 
 #! -------------------ERROR WEB PAGE----------------
 @app.error(code=500)
 def error_500(error):
+    copy_path(source='./Views/error.tpl', destination='./error.html')
     return template('error', error_message = f"Error interno del servidor: {error}", error_code = 500)
 
 @app.error(code=404)
 def error_404(error):
+    copy_path(source='./Views/404.tpl', destination='./404.html')
     return template('404', error_message = "Página no encontrada", error_code = 404)
 
 

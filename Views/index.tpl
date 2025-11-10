@@ -31,6 +31,7 @@
 
         <link rel="stylesheet" type="text/css" href="/Static/index/styles.css">
         <link rel="stylesheet" type="text/css" href="/Static/template.css">
+
         <link rel="preload" href="/Static/home/styles.css" as="style">
         <link rel="preload" href="/Static/home/script.js" as="script">
         <link rel="preload" href="https://didag.net/Static/img/DIDAGROUP.png" as="image">
@@ -57,7 +58,6 @@
         </div>
 
         <script src="/Static/jquery.js"></script>
-        <script src="/Static/chart.js"></script>
         <script src="/Static/template.js"></script>
         <script src="/Static/index/script.js"></script>
     </body>

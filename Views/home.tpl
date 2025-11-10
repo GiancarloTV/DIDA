@@ -5,11 +5,12 @@
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="theme-color" content="#000000">
-        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#121214">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
         <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/Static/template.css">
         <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
     </head>
 
@@ -21,17 +22,6 @@
                     <img src="https://didag.net/Static/img/DIDAGROUP.png" alt="DIDAGROUP Logo" id="dida_logo">
                 </span>
             </div>
-
-            <nav class="section_header_nav">
-                <ul class="section_header_nav_list">
-                    <li class="section_header_nav_item-active">Inicio</li>
-                    <li>Servicios</li>
-                    <li>Contacto</li>
-                    <li>FAQ</li>
-                </ul>
-            </nav>
-            
-            <span class="section_header_nav_button symbols" id="menu_button" title="Open Menu"> &#xe5d2; </span>
         </header>
 
         <main class="section_main">
@@ -277,21 +267,42 @@
                         </p>
                     </div>
 
+                    <div class="footer_section footer_nav">
+                        <h4 class="footer_title">Menú</h4>
+
+                        <ul class="footer_nav_list">
+                            <li class="footer_nav_item">
+                                <span class="symbols">&#xe88a;</span>
+                                <p>Inicio</p>
+                            </li>
+
+                            <li class="footer_nav_item">
+                                <span class="symbols">&#xf1cc;</span>
+                                <p>Servicios</p>
+                            </li>
+
+                            <li class="footer_nav_item">
+                                <span class="symbols">&#xe999;</span>
+                                <p>Contacto</p>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="footer_section footer_contact">
                         <h4 class="footer_title">Contacto</h4>
 
-                        <div class="footer_contact_info">
-                            <div class="contact_item">
+                        <div class="footer_contact_list">
+                            <div class="footer_contact_item">
                                 <span class="symbols">&#xe0c8;</span>
                                 <span>San Juan del Río, Qro, México</span>
                             </div>
 
-                            <div class="contact_item">
+                            <div class="footer_contact_item">
                                 <span class="symbols">&#xe0be;</span>
                                 <a href="mailto:ventas@didag.net">ventas@didag.net</a>
                             </div>
 
-                            <div class="contact_item">
+                            <div class="footer_contact_item">
                                 <span class="symbols">&#xe9cd;</span>
                                 <a href="https://wa.me/524272312080" target="_blank">+52 427 231 2080</a>
                             </div>
@@ -308,36 +319,6 @@
             </section>
 
         </main>
-
-        <aside id="aside_header_nav" class="aside_header_nav">
-            <div class="aside_header_nav_content">
-                <div class="aside_header_nav_logo">
-                    <span class="aside_header_logo_img">
-                        <img src="https://didag.net/Static/img/DIDA.png" alt="DIDAGROUP Logo" id="dida_logo">
-                    </span>
-
-                    <span class="symbols aside_header_logo_span" id="aside_header_nav_close">&#xe5cd;</span>
-                </div>
-
-                <ul class="aside_header_nav_list">
-                    <li class="aside_header_nav_item-active">Inicio</li>
-                    <li>Servicios</li>
-                    <li>Contacto</li>
-                    <li>FAQ</li>
-                </ul>
-
-                <div class="aside_header_nav_contact">
-                    <a href="mailto:ventas@didag.net" class="symbols">&#xe0be;</a>
-                    <a href="https://wa.me/524272312080" target="_blank" class="symbols">&#xe9cd;</a>
-                </div>
-
-                <div class="aside_header_nav_bottom">
-                    <p>© 2025 DIDA GROUP.</p>
-                    <p>Todos los derechos reservados.</p>
-                </div>
-
-            </div>
-        </aside>
 
         <aside id="aside_message" class="aside_message">
             <div class="aside_message_content">

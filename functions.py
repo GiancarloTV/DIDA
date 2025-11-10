@@ -225,6 +225,25 @@ def delete_path (path: str, dir: bool = False) -> bool:
 def construct_path (part_one: str, part_two: str) ->str:
     return os.path.join(part_one, part_two)
 
+def copy_path (source: str, destination: str, dir: bool = False, overwrite: bool = True) -> bool:
+    """
+    Copy a file or directory to a new location
+
+    Parameters:
+    source (str): Path of source file or directory
+    destination (str): Path of destination file or directory
+
+    Returns:
+    bool: Return the result of `verify_path()` for destination copied
+    """
+
+    if verify_path(path=source):
+        if dir:
+            shutil.copytree(source, destination, dirs_exist_ok=overwrite)
+        else:
+            shutil.copy2(source, destination)
+
+    return verify_path(path=destination)
 
 def get_directory_path (directory: str) -> (str | None):
     """

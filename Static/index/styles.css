@@ -77,16 +77,6 @@
     object-fit: contain;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes counter-spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(-360deg); }
-}
-
 /*? === MEDIA QUERY TABLET ===  */
 
 @media screen and (max-width: 769px) {

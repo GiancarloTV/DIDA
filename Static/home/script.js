@@ -27,9 +27,11 @@ $(document).ready(function() {
 
     })();
 
+    update_bar_theme(true);
+
     // === SMOOTH SCROLLING FOR NAVIGATION ===
     
-    $('.section_header_nav_list li, .aside_header_nav_list li').on('click', function() {
+    $('.footer_nav_list li p').on('click', function() {
         const text = $(this).text().toLowerCase();
         let targetSection;
 
@@ -399,5 +401,12 @@ $(document).ready(function() {
         } catch (error) {
         console.error(error);
         server_config = null;
+        }
+    }
+
+    function update_bar_theme (light_mode) {
+        const theme_color_meta = document.querySelector("meta[name='theme-color']");
+        if (theme_color_meta) {
+            theme_color_meta.setAttribute("content", light_mode ? '#121212' : '#c2c2c2');
         }
     }
