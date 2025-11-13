@@ -699,9 +699,14 @@ class SystemClass:
         }
 
         self.version_data = {
-            "Version": "0.0.1",
-            "Date": get_date(format='%d/%m/%Y'),
-            "LastModified": get_date(format='%d/%m/%Y'),
+            "AppWeb" : {
+                "Version": "0.0.1",
+                "Date": get_date(format='%d/%m/%Y'),
+            },
+            "Receiver" : {
+                "Version": "0.0.1",
+                "Date": get_date(format='%d/%m/%Y'),
+            },
             "Author" : "Ing Giancarlo TV"
         }
 
