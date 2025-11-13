@@ -703,10 +703,6 @@ class SystemClass:
                 "Version": "0.0.1",
                 "Date": get_date(format='%d/%m/%Y'),
             },
-            "Receiver" : {
-                "Version": "0.0.1",
-                "Date": get_date(format='%d/%m/%Y'),
-            },
             "Author" : "Ing Giancarlo TV"
         }
 
