@@ -1212,11 +1212,11 @@
     color: #ff0000;
 }
 
-.footer_nav_item span:last-of-type {
+.footer_nav_item p {
     transition: transform 0.3s ease;
 }
 
-.footer_nav_item span:last-of-type:hover {
+.footer_nav_item p:hover {
     color: white;
     transform: translateY(-1vh);
 }

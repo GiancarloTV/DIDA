@@ -294,7 +294,7 @@
                         <div class="footer_contact_list">
                             <div class="footer_contact_item">
                                 <span class="symbols">&#xe0c8;</span>
-                                <span>San Juan del Río, Qro, México</span>
+                                <a href="https://maps.app.goo.gl/e6BCcvpX3WBF3keK9" target="_blank" rel="noopener noreferrer">San Juan del Río, Qro, México</a>
                             </div>
 
                             <div class="footer_contact_item">
