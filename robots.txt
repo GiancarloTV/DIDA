@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://didag.net/sitemap.xml
+# If you need to block staging or private paths, add Disallow rules below.
