@@ -21,7 +21,7 @@
         <!-- Open Graph / Social preview -->
         <meta property="og:title" content="DIDA GROUP — KPI System">
         <meta property="og:description" content="DIDA GROUP — KPI System: dashboards en tiempo real, reportes automáticos y soluciones para mejorar la productividad y eficiencia de tu empresa.">
-        <meta property="og:image" content="https://didag.net/Static/img/DIDAGROUP.png">
+        <meta property="og:image" content="https://didag.net/Static/img/DIDAGBK.png">
         <meta property="og:url" content="https://didag.net/">
         <meta property="og:type" content="website">
 
@@ -29,7 +29,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="DIDA GROUP — KPI System">
         <meta name="twitter:description" content="DIDA GROUP — KPI System: dashboards en tiempo real, reportes automáticos y soluciones para mejorar la productividad y eficiencia de tu empresa.">
-        <meta name="twitter:image" content="https://didag.net/Static/img/DIDAGROUP.png">
+        <meta name="twitter:image" content="https://didag.net/Static/img/DIDAGBK.png">
 
         <!-- Fallback -->
         <link rel="image_src" href="https://didag.net/Static/img/DIDAGROUP.png">
@@ -49,7 +49,7 @@
                     "@type": "Organization",
                     "name": "DIDA GROUP",
                     "url": "https://didag.net/",
-                    "logo": "https://didag.net/Static/img/DIDAGROUP.png"
+                    "logo": "https://didag.net/Static/img/DIDAGBK.png"
                 },
                 {
                     "@type": "WebSite",
