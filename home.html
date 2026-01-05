@@ -313,7 +313,7 @@
 
                 <div class="footer_bottom">
                     <p class="footer_copyright">
-                        © 2025 DIDA GROUP. Todos los derechos reservados.
+                        © 2026 DIDA GROUP. Todos los derechos reservados.
                     </p>
                 </div>
             </section>
