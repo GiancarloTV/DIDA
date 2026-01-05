@@ -6,13 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="theme-color" content="#121214">
-        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
         <meta name="description" content="DIDA GROUP — KPI System: dashboards en tiempo real, reportes automáticos y soluciones para mejorar la productividad y eficiencia de tu empresa.">
         <meta name="robots" content="index, follow">
 
-        <link rel="canonical" href="https://didag.net/">
+        <link rel="canonical" href="https://didag.net/home">
         <link rel="alternate" hreflang="es" href="https://didag.net/">
         <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="/Static/index/styles.css">
