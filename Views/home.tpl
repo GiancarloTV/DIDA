@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>DIDA GROUP</title>
-
+        <title>DIDA GROUP - Home</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="theme-color" content="#121214">
-        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
         <meta name="description" content="DIDA GROUP — KPI System: dashboards en tiempo real, reportes automáticos y soluciones para mejorar la productividad y eficiencia de tu empresa.">
@@ -55,6 +55,10 @@
             ]
         }
         </script>
+
+        <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/Static/template.css">
+        <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
     </head>
 
     <body>
@@ -68,6 +72,17 @@
         </header>
 
         <main class="section_main">
+
+            <section class="section_main_hero">
+                <div class="section_main_content">
+                    <div class="section_main_video_wrap">
+                        <video id="hero_video" class="hero_video"  playsinline controls>
+                            <source src="https://didag.net/Static/DIDAGROUP_KPI.mp4" type="video/mp4">
+                            Tu navegador no soporta la etiqueta <code>video</code>.
+                        </video>
+                    </div>
+                </div>
+            </section>
 
             <section class="section_main_hero">
                 <div class="section_main_content">
@@ -337,7 +352,7 @@
                         <div class="footer_contact_list">
                             <div class="footer_contact_item">
                                 <span class="symbols">&#xe0c8;</span>
-                                <a href="https://maps.app.goo.gl/e6BCcvpX3WBF3keK9" target="_blank" rel="noopener noreferrer">San Juan del Río, Qro, México</a>
+                                <span>San Juan del Río, Qro, México</span>
                             </div>
 
                             <div class="footer_contact_item">
@@ -356,7 +371,7 @@
 
                 <div class="footer_bottom">
                     <p class="footer_copyright">
-                        © 2026 DIDA GROUP. Todos los derechos reservados.
+                        © 2025 DIDA GROUP. Todos los derechos reservados.
                     </p>
                 </div>
             </section>
