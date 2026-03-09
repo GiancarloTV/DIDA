@@ -1,5 +1,17 @@
 /*todo === MAIN HERO ===  */
 
+.section_main_hero_video {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--background-color);
+    padding-block: 1dvh;
+}
+
 .section_main_hero {
     height: 90vh;
     width: 100%;
