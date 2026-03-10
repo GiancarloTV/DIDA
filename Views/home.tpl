@@ -55,10 +55,6 @@
             ]
         }
         </script>
-
-        <link rel="icon" href="https://didag.net/Static/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" type="text/css" href="/Static/template.css">
-        <link rel="stylesheet" type="text/css" href="/Static/home/styles.css">
     </head>
 
     <body>
@@ -73,7 +69,7 @@
 
         <main class="section_main">
 
-            <section class="section_main_hero">
+            <section class="section_main_hero_video">
                 <div class="section_main_content">
                     <div class="section_main_video_wrap">
                         <video id="hero_video" class="hero_video"  playsinline controls>
