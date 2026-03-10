@@ -52,6 +52,7 @@
     max-height: 560px;
     object-fit: cover;
     display: block;
+    border-radius: 2dvh;
 }
 
 .section_main_content_wrap {
