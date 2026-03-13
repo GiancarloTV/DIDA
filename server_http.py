@@ -25,6 +25,7 @@ try:
 
     from time import sleep as wait
     import json
+    import subprocess
 
     # IMPORT RESOURCES FOR SERVER SYSTEM
     import mimetypes
@@ -119,14 +120,6 @@ def home():
     copy_path(source='./Views/home.tpl', destination='./home.html')
 
     return template('home')
-
-@app.route('/AMSC')
-def amsc():
-    server_request(True)
-
-    copy_path(source='./Views/AMSC.tpl', destination='./AMSC.html')
-
-    return template('AMSC')
 
 
 #! -------------------ERROR WEB PAGE----------------
@@ -306,6 +299,8 @@ if __name__ == '__main__':
         network = NetworkClass()
         network.loop = True
         network.verify_connection()
+
+        ngrok = subprocess.Popen(['ngrok', 'http', f'{server_port}'], creationflags=subprocess.CREATE_NEW_CONSOLE)
 
         start_server(ip=network.ip, port=server_port)
 
